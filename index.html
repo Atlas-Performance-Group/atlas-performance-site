@@ -716,11 +716,10 @@ h2.title .dim{color:transparent;-webkit-text-stroke:1.5px rgba(245,244,242,.5)}
     <div class="hero-content">
       <span class="eyebrow">Sites <b>•</b> Tráfego Pago</span>
       <h1>
-        <span class="l"><span class="fill">Sua marca</span></span>
-        <span class="l"><span class="red">no topo.</span></span>
-        <span class="l"><span class="stroke">Nós te levamos até lá.</span></span>
+        <span class="l"><span class="fill">Seu site e seus anúncios,</span></span>
+        <span class="l"><span class="red">no mesmo time.</span></span>
       </h1>
-      <p class="subtitle">Site que vende sozinho. Tráfego pago trazendo cliente todo dia. Essa é a subida que assumimos com você.</p>
+      <p class="subtitle">Criamos o site e gerenciamos o tráfego pago, com relatório toda semana. Peça o diagnóstico pelo WhatsApp.</p>
       <div class="hero-ctas">
         <a class="btn-primary" href="https://wa.me/5511958031583?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Atlas%20e%20quero%20saber%20mais%20sobre%20sites%20e%20tr%C3%A1fego%20pago%20para%20minha%20empresa." target="_blank" rel="noopener">Falar no WhatsApp
           <svg class="arrow-ic" width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.1 4.49.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.85 9.85 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 7 2.9 9.83 9.83 0 0 1 2.89 7c0 5.45-4.44 9.88-9.9 9.88m8.42-18.3A11.8 11.8 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.94L.07 24l6.31-1.65a11.88 11.88 0 0 0 5.67 1.44h.01c6.55 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.16-3.48-8.41"/></svg>
@@ -768,10 +767,10 @@ h2.title .dim{color:transparent;-webkit-text-stroke:1.5px rgba(245,244,242,.5)}
     <span class="kicker reveal">Prova, não promessa</span>
     <h2 class="title reveal">O que acontece <span class="dim">depois da subida</span></h2>
     <div class="metrics-grid">
-      <div class="metric reveal"><div class="num">R$ <b><span class="count" data-to="1">0</span>M+</b></div><p>Investidos em mídia sob nossa gestão</p></div>
-      <div class="metric reveal"><div class="num"><b><span class="count" data-to="3.4" data-dec="1">0</span>x</b></div><p>ROAS médio nas contas ativas</p></div>
-      <div class="metric reveal"><div class="num">+<b><span class="count" data-to="120">0</span></b></div><p>Sites e campanhas entregues com sucesso</p></div>
-      <div class="metric reveal"><div class="num"><b><span class="count" data-to="14">0</span></b></div><p>Dias médios para o site ir ao ar</p></div>
+      <div class="metric reveal"><div class="num">R$ <b><span class="count" data-to="1">1</span>M+</b></div><p>Investidos em mídia sob nossa gestão</p></div>
+      <div class="metric reveal"><div class="num"><b><span class="count" data-to="3.4" data-dec="1">3.4</span>x</b></div><p>ROAS médio nas contas ativas</p></div>
+      <div class="metric reveal"><div class="num">+<b><span class="count" data-to="120">120</span></b></div><p>Sites e campanhas entregues com sucesso</p></div>
+      <div class="metric reveal"><div class="num"><b><span class="count" data-to="14">14</span></b></div><p>Dias médios para o site ir ao ar</p></div>
     </div>
 
     <div class="trust-strip">
@@ -1141,6 +1140,8 @@ window.addEventListener("DOMContentLoaded", function () {
      Motion (Framer Motion para JS): animate / inView / scroll /
      stagger / press / hover — tudo abaixo depende da lib
      ================================================================ */
+  /* O HTML já traz o valor final (sem JS não aparece "0"); com JS e movimento liberado, a contagem parte do 0. */
+  if (!reduced) document.querySelectorAll(".count").forEach(function (el) { el.textContent = "0"; });
   var counterIO = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
       if (e.isIntersecting) { runCounter(e.target); counterIO.unobserve(e.target); }
