@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://atlasperformancegroup.vercel.app/sitemap.xml
+Sitemap: https://atlasperformancegroup.com/sitemap.xml
