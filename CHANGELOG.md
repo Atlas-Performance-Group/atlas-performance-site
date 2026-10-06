@@ -33,3 +33,7 @@ Nada foi publicado em produção. Alterações apenas nesta branch (commit local
 - HSTS sem `preload` (difícil de reverter; avaliar depois que todos os subdomínios tiverem HTTPS).
 - Pendentes (dependem do Miguel): ID real do GA4; CNPJ/razão social na política de privacidade.
 - Observação: `generate_lead` é o único evento a marcar como conversão (`whatsapp_click`/`email_click` são complementares).
+
+## Correção de rumo (domínio)
+- O Miguel confirmou que o domínio do site é `atlasperformancegroup.vercel.app` (não há domínio próprio). Revertidos canonical, og, schema, sitemap, robots e llms.txt para esse endereço.
+- E-mail voltou para `comercial.atlasperformance@gmail.com` (única caixa existente). Quando houver e-mail próprio, trocar com um único find/replace.
