@@ -93,7 +93,7 @@
     var st = document.createElement("style");
     st.textContent =
       "#ck{position:fixed;left:16px;right:16px;bottom:16px;max-width:560px;z-index:9999;background:#111;color:#f5f5f5;border:1px solid #333;border-radius:12px;padding:16px 18px;font:400 14px/1.5 system-ui,sans-serif;box-shadow:0 10px 40px rgba(0,0,0,.5)}" +
-      "#ck p{margin:0 0 12px}" +
+      "#ck p{margin:0 0 12px}#ck a{color:#ff5a3c;text-decoration:underline}" +
       "#ck .r{display:flex;gap:10px;flex-wrap:wrap}" +
       "#ck button{min-height:44px;padding:0 18px;border-radius:8px;border:1px solid #555;background:transparent;color:#f5f5f5;font:600 14px system-ui,sans-serif;cursor:pointer}" +
       "#ck button.y{background:#e10600;border-color:#e10600;color:#fff}" +
@@ -101,7 +101,7 @@
     document.head.appendChild(st);
     var d = document.createElement("div");
     d.id = "ck"; d.setAttribute("role", "dialog"); d.setAttribute("aria-label", "Aviso de cookies");
-    d.innerHTML = '<p>Usamos cookies de análise (Google Analytics) para entender como o site é usado e melhorar a sua experiência. Você escolhe.</p>' +
+    d.innerHTML = '<p>Usamos cookies de análise (Google Analytics) para entender como o site é usado e melhorar a sua experiência. Você escolhe. Saiba mais na <a href="/politica-de-privacidade/">Política de Privacidade</a>.</p>' +
       '<div class="r"><button type="button" class="y" id="ck-y">Aceitar</button><button type="button" id="ck-n">Recusar</button></div>';
     document.body.appendChild(d);
     function close(v) {
