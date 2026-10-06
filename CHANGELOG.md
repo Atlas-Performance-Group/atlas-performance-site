@@ -50,3 +50,4 @@ Nada foi publicado em produção. Alterações apenas nesta branch (commit local
 - Textos de IA removidos ("Construído com IA", "Tecnologia própria + IA aplicada", "IA aplicada" em Sites Institucionais, incluindo meta e schema) e a frase de escassez "vagas limitadas".
 - Faixa de plataformas sem HubSpot e RD Station (não confirmados) e sem rolagem automática.
 - Script da home reescrito (~80 linhas): menu, FAQ, entrada suave das seções, linha do método, botão flutuante.
+- Sitemap com lastmod; Barlow Condensed com font-display:optional (sem troca de fonte = sem deslocamento de layout, CLS).
