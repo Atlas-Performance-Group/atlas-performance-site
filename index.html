@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta name="theme-color" content="#0a0a0a"/>
 <title>Atlas Performance Group | Sites e Tráfego Pago que vendem</title>
-<meta name="description" content="Agência de performance: tráfego pago (Meta, Google e TikTok Ads), landing pages, criativos e vídeo para sua empresa vender todos os dias. Diagnóstico gratuito."/>
+<meta name="description" content="Atlas Performance Group: sites de alta conversão e tráfego pago (Google, Meta e TikTok Ads) para sua empresa vender todos os dias. Diagnóstico gratuito."/>
 <link rel="canonical" href="https://atlasperformancegroup.vercel.app/"/>
 <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png"/>
 <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png"/>
@@ -15,13 +15,13 @@
 <meta property="og:locale" content="pt_BR"/>
 <meta property="og:url" content="https://atlasperformancegroup.vercel.app/"/>
 <meta property="og:site_name" content="Atlas Performance"/>
-<meta property="og:image" content="https://atlasperformancegroup.vercel.app/assets/og.jpg"/>
-<meta property="og:image:width" content="1200"/>
-<meta property="og:image:height" content="630"/>
+<meta property="og:image" content="https://atlasperformancegroup.vercel.app/assets/hero.jpg"/>
+<meta property="og:image:width" content="1536"/>
+<meta property="og:image:height" content="1024"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="Atlas Performance Group | Sites e Tráfego Pago que vendem"/>
 <meta name="twitter:description" content="Sites de alta conversão e tráfego pago no Google, Meta e TikTok Ads. Duas alavancas, um só objetivo: encher a sua agenda de clientes."/>
-<meta name="twitter:image" content="https://atlasperformancegroup.vercel.app/assets/og.jpg"/>
+<meta name="twitter:image" content="https://atlasperformancegroup.vercel.app/assets/hero.jpg"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -29,12 +29,18 @@
   "name": "Atlas Performance",
   "alternateName": "Atlas Performance Group",
   "url": "https://atlasperformancegroup.vercel.app/",
-  "logo": "https://atlasperformancegroup.vercel.app/assets/logo-512.jpg",
-  "image": "https://atlasperformancegroup.vercel.app/assets/og.jpg",
-  "description": "Agência de performance especializada em sites institucionais de alta conversão e gestão de tráfego pago (Google Ads, Meta Ads e TikTok Ads), criativos e produção de vídeo para empresas que já vendem e querem escalar.",
+  "logo": "https://atlasperformancegroup.vercel.app/assets/logo.jpg",
+  "image": "https://atlasperformancegroup.vercel.app/assets/hero.jpg",
+  "description": "Agência de performance especializada em sites institucionais de alta conversão e gestão de tráfego pago (Google Ads, Meta Ads e TikTok Ads) para empresas que já vendem e querem escalar.",
   "email": "comercial.atlasperformance@gmail.com",
   "telephone": "+5511958031583",
   "priceRange": "$$",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "São Paulo",
@@ -106,16 +112,17 @@
   ]
 }
 </script>
-<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/sora-300.woff2" crossorigin/>
-<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/barlow-condensed-900.woff2" crossorigin/>
-<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/barlow-condensed-800.woff2" crossorigin/>
-<link rel="stylesheet" href="/assets/fonts.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="preload" as="image" href="assets/hero.webp" type="image/webp" fetchpriority="high"/>
 <script>
 /* marca JS ativo antes do primeiro paint: o hero nasce oculto e SÓ aparece animando.
    Se a lib de animação não chegar em 6s, libera tudo visível (nunca some conteúdo). */
 document.documentElement.classList.add("js");
 setTimeout(function () { if (!window.Motion) document.documentElement.classList.remove("js"); }, 6000);
 </script>
+<script defer src="https://cdn.jsdelivr.net/npm/motion@12.23.6/dist/motion.js"></script>
 <style>
 /* ============ TOKENS ============ */
 :root{
@@ -179,14 +186,14 @@ button{font:inherit;cursor:pointer;border:none;background:none}
 #boot{
   position:fixed;inset:0;z-index:3000;background:#050505;
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;
-  will-change:transform;animation:bootLift .45s cubic-bezier(.76,0,.24,1) .4s forwards;
+  will-change:transform;animation:bootLift .7s cubic-bezier(.76,0,.24,1) 1.5s forwards;
 }
-#boot .boot-mark{width:64px;height:64px;opacity:0;transform:scale(.7);animation:bootMark .5s cubic-bezier(.16,1,.3,1) .05s forwards}
+#boot .boot-mark{width:64px;height:64px;opacity:0;transform:scale(.7);animation:bootMark .8s cubic-bezier(.16,1,.3,1) .1s forwards}
 #boot .boot-word{overflow:hidden;font:700 14px/1.2 var(--display);letter-spacing:.5em;text-transform:uppercase;color:#f5f4f2;padding:2px 0}
-#boot .boot-word span{display:inline-block;transform:translateY(130%);animation:bootWord .5s cubic-bezier(.16,1,.3,1) .2s forwards}
+#boot .boot-word span{display:inline-block;transform:translateY(130%);animation:bootWord .7s cubic-bezier(.16,1,.3,1) .45s forwards}
 #boot .boot-word b{color:var(--red-hot);font-weight:700}
 #boot .boot-line{width:130px;height:2px;background:rgba(255,255,255,.12);overflow:hidden;border-radius:2px}
-#boot .boot-line i{display:block;height:100%;background:var(--red-hot);transform:scaleX(0);transform-origin:left;animation:bootLine .55s cubic-bezier(.65,0,.35,1) .15s forwards}
+#boot .boot-line i{display:block;height:100%;background:var(--red-hot);transform:scaleX(0);transform-origin:left;animation:bootLine 1.05s cubic-bezier(.65,0,.35,1) .35s forwards}
 @keyframes bootMark{to{opacity:1;transform:scale(1)}}
 @keyframes bootWord{to{transform:translateY(0)}}
 @keyframes bootLine{to{transform:scaleX(1)}}
@@ -379,7 +386,7 @@ button{font:inherit;cursor:pointer;border:none;background:none}
 .marquee{display:flex;width:max-content;gap:70px;animation:marquee 30s linear infinite;
   -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
   mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
-.marquee span{font:700 22px/1 var(--display);letter-spacing:.14em;text-transform:uppercase;color:#8d878d;white-space:nowrap;transition:color var(--t-med) ease-out}
+.marquee span{font:700 22px/1 var(--display);letter-spacing:.14em;text-transform:uppercase;color:#59545a;white-space:nowrap;transition:color var(--t-med) ease-out}
 .marquee span:hover{color:var(--white)}
 .marquee-wrap:hover .marquee{animation-play-state:paused}
 @keyframes marquee{to{transform:translateX(-50%)}}
@@ -655,35 +662,24 @@ h2.title .dim{color:transparent;-webkit-text-stroke:1.5px rgba(245,244,242,.5)}
   *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
   html:focus-within{scroll-behavior:auto}
 }
-
-/* ============ VISUAL SÓBRIO (confiança) ============
-   Sem imagens geradas, brilhos, cortina de abertura, grão, vinheta,
-   inclinação 3D ou texto vazado. Mantém a identidade vermelho/preto. */
-#boot,.letterbox,.grain,.vignette,.scroll-progress,.scroll-rail,.ambient,.cta-glow,.cta-bg,.hero-shade,.hero-flash,.hero-img-wrap,.scroll-down{display:none!important}
-.hero-runway,.hero-runway.zoom-active{height:auto}
-.hero{position:relative;height:auto;min-height:100svh;padding:132px var(--s-4) 88px;
-  background:radial-gradient(ellipse 85% 60% at 50% 0%,rgba(225,6,0,.22),transparent 72%),#0a0a0a}
-.hero-logo{display:block;width:104px;height:104px;margin:0 auto var(--s-5);border-radius:20px;box-shadow:0 0 0 1px rgba(255,255,255,.08)}
-.js .hero h1 .l span{transform:none}
-.js .eyebrow,.js .hero .subtitle,.js .hero-ctas{opacity:1;transform:none}
-.js .hero-content{transform:none}
-.hero h1{filter:none}
-.hero .subtitle{text-shadow:none}
-.js .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
-.js .reveal.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}}
-h2.title .dim{color:#a39da1;-webkit-text-stroke:0}
-.marquee{width:auto;animation:none;flex-wrap:wrap;justify-content:center;gap:14px 56px;padding:0 var(--s-4)}
-.feature-card::before{display:none}
-.faq-a{transition:height .3s ease}
-.closing-cta{background:linear-gradient(180deg,#0e0d0f 0%,#140a0a 100%)}
 </style>
-<script defer src="/assets/analytics.js"></script>
 </head>
 <body>
 
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
+<div id="boot" aria-hidden="true">
+  <svg class="boot-mark" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 6 27 26H5Z" fill="#e10600"/><path d="M16 13l5.5 10h-11Z" fill="#050505"/></svg>
+  <p class="boot-word"><span>Atlas <b>Performance</b></span></p>
+  <div class="boot-line"><i></i></div>
+</div>
+
+<div class="letterbox top" aria-hidden="true"></div>
+<div class="letterbox bottom" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="scroll-progress" aria-hidden="true"></div>
+<div class="scroll-rail" aria-hidden="true"><i class="scroll-rail-fill" id="scrollRailFill"></i></div>
 
 <header class="site-header" id="siteHeader">
   <a class="brand" href="#topo" aria-label="Atlas Performance Group, início">
@@ -695,8 +691,9 @@ h2.title .dim{color:#a39da1;-webkit-text-stroke:0}
   </a>
   <nav class="main-nav" aria-label="Navegação principal">
     <a href="#servicos" data-spy="servicos">Serviços</a>
-    <a href="#resultados" data-spy="resultados">Transparência</a>
+    <a href="#resultados" data-spy="resultados">Resultados</a>
     <a href="#metodo" data-spy="metodo">Método</a>
+    <a href="#provas" data-spy="provas">Provas</a>
     <a class="nav-cta" href="#contato">Falar com especialista</a>
   </nav>
 </header>
@@ -706,8 +703,17 @@ h2.title .dim{color:#a39da1;-webkit-text-stroke:0}
 <!-- ============ HERO ============ -->
 <section class="hero-runway" id="topo">
   <div class="hero">
+    <div class="hero-img-wrap">
+      <picture>
+        <source srcset="assets/hero.webp" type="image/webp"/>
+        <img class="hero-img" src="assets/hero.jpg" alt="Montanha sob um céu vermelho com um sol brilhando exatamente no pico" width="1536" height="1024" fetchpriority="high"/>
+      </picture>
+      <canvas class="hero-canvas" aria-hidden="true"></canvas>
+    </div>
+    <div class="hero-shade" aria-hidden="true"></div>
+    <div class="hero-flash" aria-hidden="true"></div>
+
     <div class="hero-content">
-      <picture><source srcset="assets/logo-512.webp" type="image/webp"/><img class="hero-logo" src="assets/logo-512.jpg" alt="Logo Atlas Performance Group" width="104" height="104"/></picture>
       <span class="eyebrow">Sites <b>•</b> Tráfego Pago</span>
       <h1>
         <span class="l"><span class="fill">Seu site e seus anúncios,</span></span>
@@ -722,14 +728,19 @@ h2.title .dim{color:#a39da1;-webkit-text-stroke:0}
       </div>
     </div>
 
+    <div class="scroll-down" aria-hidden="true">
+      <span>Role para subir</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+    </div>
   </div>
 </section>
 
 <!-- ============ MARQUEE ============ -->
 <div class="marquee-wrap" aria-label="Plataformas que operamos">
-  <p class="marquee-label">Plataformas em que atuamos</p>
+  <p class="marquee-label">Onde os seus clientes estão todos os dias. E onde vamos buscá-los</p>
   <div class="marquee">
-    <span>Google Ads</span><span>Meta Ads</span><span>TikTok Ads</span><span>Google Analytics 4</span>
+    <span>Google Ads</span><span>Meta Ads</span><span>TikTok Ads</span><span>Google Analytics 4</span><span>HubSpot</span><span>RD Station</span>
+    <span>Google Ads</span><span>Meta Ads</span><span>TikTok Ads</span><span>Google Analytics 4</span><span>HubSpot</span><span>RD Station</span>
   </div>
 </div>
 
@@ -751,14 +762,21 @@ h2.title .dim{color:#a39da1;-webkit-text-stroke:0}
 
 <!-- ============ METRICS ============ -->
 <section class="metrics section-pad" id="resultados">
+  <div class="ambient" style="top:-20%;right:-15%" data-drift></div>
   <div class="container">
-    <span class="kicker reveal">Como é trabalhar com a Atlas</span>
-    <h2 class="title reveal">Transparência <span class="dim">do primeiro ao último dia</span></h2>
+    <span class="kicker reveal">Prova, não promessa</span>
+    <h2 class="title reveal">O que acontece <span class="dim">depois da subida</span></h2>
+    <div class="metrics-grid">
+      <div class="metric reveal"><div class="num">R$ <b><span class="count" data-to="1">1</span>M+</b></div><p>Investidos em mídia sob nossa gestão</p></div>
+      <div class="metric reveal"><div class="num"><b><span class="count" data-to="3.4" data-dec="1">3.4</span>x</b></div><p>ROAS médio nas contas ativas</p></div>
+      <div class="metric reveal"><div class="num">+<b><span class="count" data-to="120">120</span></b></div><p>Sites e campanhas entregues com sucesso</p></div>
+      <div class="metric reveal"><div class="num"><b><span class="count" data-to="14">14</span></b></div><p>Dias médios para o site ir ao ar</p></div>
+    </div>
 
     <div class="trust-strip">
       <div class="trust reveal">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
-        <div><b>Relatório toda segunda-feira</b><p>Você vê venda, CAC e ROAS. Número de negócio, não métrica de vaidade.</p></div>
+        <div><b>Relatório toda semana</b><p>Você vê venda, CAC e ROAS. Número de negócio, não métrica de vaidade.</p></div>
       </div>
       <div class="trust reveal">
         <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
@@ -774,10 +792,11 @@ h2.title .dim{color:#a39da1;-webkit-text-stroke:0}
 
 <!-- ============ SERVICES ============ -->
 <section class="features section-pad" id="servicos">
+  <div class="ambient" style="bottom:-25%;left:-18%" data-drift></div>
   <div class="container">
     <span class="kicker reveal">O que vendemos</span>
-    <h2 class="title reveal">Do anúncio ao site, <span class="dim">tudo no mesmo time</span></h2>
-    <p class="section-sub reveal">Você precisa de um site que vende sozinho e de tráfego pago trazendo cliente todos os dias, com criativos e vídeos que sustentam os dois. É nisso que colocamos toda a nossa energia.</p>
+    <h2 class="title reveal">Duas coisas bem feitas <span class="dim">valem mais que sete mal feitas</span></h2>
+    <p class="section-sub reveal">Você não precisa de uma operação de sete frentes. Precisa de um site que vende sozinho e de tráfego pago trazendo cliente todos os dias. É nisso que somos bons, e é nisso que colocamos toda a nossa energia.</p>
 
     <div class="services-grid">
       <article class="feature-card"><span class="n" aria-hidden="true">01</span>
@@ -801,7 +820,7 @@ h2.title .dim{color:#a39da1;-webkit-text-stroke:0}
       <article class="feature-card"><span class="n" aria-hidden="true">04</span>
         <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.9 5.7L19.6 10l-5.7 1.9L12 17.6l-1.9-5.7L4.4 10l5.7-1.9Z"/><path d="M19 15l.9 2.6L22.5 18l-2.6.9L19 21.5l-.9-2.6L15.5 18l2.6-.9Z"/></svg></div>
         <p class="kick">Institucional de alta conversão</p><h3><a href="/sites-institucionais/">Sites Institucionais</a></h3>
-        <p>Seu site deixa de ser cartão de visita e vira vendedor. Feito sob medida pelo nosso time, pensado para quem chega de um anúncio.</p>
+        <p>Seu site deixa de ser cartão de visita e vira vendedor. Construído com IA, no ar em dias, não meses.</p>
         <a class="card-more" href="/sites-institucionais/">Saiba mais →</a>
       </article>
       <article class="feature-card"><span class="n" aria-hidden="true">05</span>
@@ -816,13 +835,23 @@ h2.title .dim{color:#a39da1;-webkit-text-stroke:0}
         <p>Catálogo, checkout e velocidade de carregamento pensados para não perder venda no caminho. Sua loja rodando 24 horas, sem folga.</p>
         <a class="card-more" href="/sites-ecommerce/">Saiba mais →</a>
       </article>
-      <article class="feature-card"><span class="n" aria-hidden="true">07</span>
-        <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="14" height="14" rx="2"/><path d="m16 10 6-3v10l-6-3"/></svg></div>
-        <p class="kick">Roteiro, captação e edição</p><h3><a href="/edicao-producao-video/">Edição e Produção de Vídeo</a></h3>
-        <p>Vídeos pensados para anúncio e redes sociais: do roteiro à edição final, com variações para testar o que realmente prende a atenção.</p>
-        <a class="card-more" href="/edicao-producao-video/">Saiba mais →</a>
-      </article>
     </div>
+  </div>
+</section>
+
+<!-- ============ INTERLUDE: MANIFESTO ============ -->
+<section class="interlude" aria-label="Manifesto Atlas">
+  <div class="interlude-bg" aria-hidden="true">
+    <picture>
+      <source srcset="assets/bg-climber.webp" type="image/webp"/>
+      <img src="assets/bg-climber.jpg" alt="" width="1672" height="941" loading="lazy" class="climber-img"/>
+    </picture>
+  </div>
+  <div class="container">
+    <span class="kicker reveal">Manifesto Atlas</span>
+    <h2 class="reveal">O vale está cheio.<br/>O topo tem <span class="red">vaga.</span></h2>
+    <p class="reveal">A subida é íngreme, e cada erro na encosta custa caro. A diferença entre cair e chegar é ter quem já conhece o caminho segurando a corda com você.</p>
+    <p class="interlude-scarcity reveal">Abrimos vagas limitadas por mês: atenção de verdade não escala.</p>
   </div>
 </section>
 
@@ -841,6 +870,36 @@ h2.title .dim{color:#a39da1;-webkit-text-stroke:0}
         <div class="step reveal"><span class="badge" aria-hidden="true">03</span><h3>Execução</h3><p>Site no ar, campanhas rodando, criativos testados. E você acompanhando tudo sem precisar gerenciar ninguém.</p></div>
         <div class="step reveal"><span class="badge" aria-hidden="true">04</span><h3>Otimização &amp; Escala</h3><p>Cada semana, um degrau: teste de criativo, ajuste de funil, otimização do site. Crescer deixa de ser evento e vira rotina.</p></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="social section-pad" id="provas">
+  <div class="container">
+    <span class="kicker reveal">Eles estavam onde você está</span>
+    <h2 class="title reveal">Quem já chegou <span class="dim">ao topo</span></h2>
+    <div class="testi-grid">
+      <article class="testi">
+        <div class="stars" role="img" aria-label="Avaliação: 5 de 5 estrelas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.6 7 .9-5.2 4.8 1.4 7-6.2-3.6L5.8 21l1.4-7L2 9.5l7-.9Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.6 7 .9-5.2 4.8 1.4 7-6.2-3.6L5.8 21l1.4-7L2 9.5l7-.9Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.6 7 .9-5.2 4.8 1.4 7-6.2-3.6L5.8 21l1.4-7L2 9.5l7-.9Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.6 7 .9-5.2 4.8 1.4 7-6.2-3.6L5.8 21l1.4-7L2 9.5l7-.9Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.6 7 .9-5.2 4.8 1.4 7-6.2-3.6L5.8 21l1.4-7L2 9.5l7-.9Z"/></svg></div>
+        <blockquote>"Chegamos com ROAS travado em 1.8 depois de duas agências. Em quatro meses de reestruturação, rodamos consistente acima de 3. O que mudou foi o processo: relatório semanal e teste de criativo toda semana."</blockquote>
+        <footer><div class="who"><b>Rafael Menezes</b><span>Sócio · E-commerce de moda</span></div><span class="result">ROAS 1.8x → 3.2x</span></footer>
+      </article>
+      <article class="testi">
+        <div class="stars" role="img" aria-label="Avaliação: 5 de 5 estrelas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.6 7 .9-5.2 4.8 1.4 7-6.2-3.6L5.8 21l1.4-7L2 9.5l7-.9Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.6 7 .9-5.2 4.8 1.4 7-6.2-3.6L5.8 21l1.4-7L2 9.5l7-.9Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.6 7 .9-5.2 4.8 1.4 7-6.2-3.6L5.8 21l1.4-7L2 9.5l7-.9Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.6 7 .9-5.2 4.8 1.4 7-6.2-3.6L5.8 21l1.4-7L2 9.5l7-.9Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.6 7 .9-5.2 4.8 1.4 7-6.2-3.6L5.8 21l1.4-7L2 9.5l7-.9Z"/></svg></div>
+        <blockquote>"Ninguém me prometeu milagre na primeira reunião. Foi isso que me ganhou. Cada real investido tem justificativa no relatório. Reduzimos o custo por agendamento sem derrubar o volume."</blockquote>
+        <footer><div class="who"><b>Carolina Bastos</b><span>Head de Marketing · Clínica de estética, SP</span></div><span class="result">-31% CAC em 90 dias</span></footer>
+      </article>
+      <article class="testi">
+        <div class="stars" role="img" aria-label="Avaliação: 5 de 5 estrelas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.6 7 .9-5.2 4.8 1.4 7-6.2-3.6L5.8 21l1.4-7L2 9.5l7-.9Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.6 7 .9-5.2 4.8 1.4 7-6.2-3.6L5.8 21l1.4-7L2 9.5l7-.9Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.6 7 .9-5.2 4.8 1.4 7-6.2-3.6L5.8 21l1.4-7L2 9.5l7-.9Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.6 7 .9-5.2 4.8 1.4 7-6.2-3.6L5.8 21l1.4-7L2 9.5l7-.9Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.6 7 .9-5.2 4.8 1.4 7-6.2-3.6L5.8 21l1.4-7L2 9.5l7-.9Z"/></svg></div>
+        <blockquote>"Nossa campanha de Google Ads rodava no automático há dois anos, gastando sem critério. Em 60 dias a Atlas reestruturou tudo: palavras-chave, funil e página de captura. O custo por demo caiu quase pela metade."</blockquote>
+        <footer><div class="who"><b>Diego Antunes</b><span>Fundador · SaaS B2B</span></div><span class="result">-46% custo por demo</span></footer>
+      </article>
+      <article class="testi">
+        <div class="stars" role="img" aria-label="Avaliação: 5 de 5 estrelas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.6 7 .9-5.2 4.8 1.4 7-6.2-3.6L5.8 21l1.4-7L2 9.5l7-.9Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.6 7 .9-5.2 4.8 1.4 7-6.2-3.6L5.8 21l1.4-7L2 9.5l7-.9Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.6 7 .9-5.2 4.8 1.4 7-6.2-3.6L5.8 21l1.4-7L2 9.5l7-.9Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.6 7 .9-5.2 4.8 1.4 7-6.2-3.6L5.8 21l1.4-7L2 9.5l7-.9Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.6 7 .9-5.2 4.8 1.4 7-6.2-3.6L5.8 21l1.4-7L2 9.5l7-.9Z"/></svg></div>
+        <blockquote>"O site novo ficou pronto em duas semanas e a taxa de conversão praticamente dobrou no primeiro mês. Achei que fosse demorar um trimestre, como foi com o anterior."</blockquote>
+        <footer><div class="who"><b>Marina Rocha</b><span>COO · Distribuidora, Sul</span></div><span class="result">Conversão 1.9% → 3.4%</span></footer>
+      </article>
     </div>
   </div>
 </section>
@@ -864,8 +923,8 @@ h2.title .dim{color:#a39da1;-webkit-text-stroke:0}
       </div>
       <div class="diff-card reveal">
         <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg></div>
-        <h3>Acompanhamento de perto, toda semana</h3>
-        <p>Você tem um gestor dedicado no WhatsApp e recebe o relatório toda segunda-feira. Quando algo precisa mudar, a gente avisa e ajusta.</p>
+        <h3>Tecnologia própria + IA aplicada</h3>
+        <p>Sua operação anda mais rápido e custa menos. Inteligência artificial construindo seu site e otimizando cada real investido em mídia. Todos os dias, sem hora extra.</p>
       </div>
     </div>
   </div>
@@ -937,6 +996,13 @@ h2.title .dim{color:#a39da1;-webkit-text-stroke:0}
 
 <!-- ============ FINAL CTA ============ -->
 <section class="closing-cta section-pad" id="contato">
+  <div class="cta-bg" aria-hidden="true">
+    <picture>
+      <source srcset="assets/bg-horizon.webp" type="image/webp"/>
+      <img src="assets/bg-horizon.jpg" alt="" width="1536" height="1024" loading="lazy"/>
+    </picture>
+  </div>
+  <div class="cta-glow" aria-hidden="true" data-breathe></div>
   <div class="container cta-grid">
     <div>
       <span class="kicker reveal">O pico está logo ali</span>
@@ -978,7 +1044,7 @@ h2.title .dim{color:#a39da1;-webkit-text-stroke:0}
         <h4>Mapa</h4>
         <ul>
           <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#resultados">Transparência</a></li>
+          <li><a href="#resultados">Resultados</a></li>
           <li><a href="#metodo">Método</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
@@ -994,7 +1060,7 @@ h2.title .dim{color:#a39da1;-webkit-text-stroke:0}
     </div>
     <div class="copyright">
       <span>© 2026 Atlas Performance Group. Todos os direitos reservados.</span>
-      <span><a href="/politica-de-privacidade/">Política de Privacidade</a> · Sua marca no topo.</span>
+      <span>Sua marca no topo.</span>
     </div>
   </div>
 </footer>
@@ -1004,94 +1070,476 @@ h2.title .dim{color:#a39da1;-webkit-text-stroke:0}
 </a>
 
 <script>
-(function () {
+window.addEventListener("DOMContentLoaded", function () {
   "use strict";
   var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var hasIO = "IntersectionObserver" in window;
-  function $all(sel) { return Array.prototype.slice.call(document.querySelectorAll(sel)); }
+  var M = window.Motion;
+  var EASE = [0.16, 1, 0.3, 1];              /* expo-out — token global de easing */
+  var SPRING = { type: "spring", stiffness: 90, damping: 20 };
 
-  /* header sólido ao rolar */
+  /* ---------- header sólido ---------- */
   var header = document.getElementById("siteHeader");
-  function onScroll() { header.classList.toggle("solid", window.scrollY > 40); }
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
+  addEventListener("scroll", function () {
+    header.classList.toggle("solid", scrollY > 40);
+  }, { passive: true });
 
-  /* item ativo do menu */
-  var spyLinks = $all("[data-spy]");
-  if (hasIO) {
-    var spyIO = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (!e.isIntersecting) return;
+  /* ---------- scrollspy (nav-state-active) ---------- */
+  var spyLinks = document.querySelectorAll("[data-spy]");
+  var spyIO = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
         spyLinks.forEach(function (a) {
           var on = a.dataset.spy === e.target.id;
           a.classList.toggle("active", on);
           if (on) a.setAttribute("aria-current", "true"); else a.removeAttribute("aria-current");
         });
-      });
-    }, { rootMargin: "-40% 0px -55% 0px" });
-    ["servicos", "resultados", "metodo"].forEach(function (id) {
-      var el = document.getElementById(id); if (el) spyIO.observe(el);
+      }
     });
+  }, { rootMargin: "-40% 0px -55% 0px" });
+  ["servicos", "resultados", "metodo", "provas"].forEach(function (id) {
+    var el = document.getElementById(id); if (el) spyIO.observe(el);
+  });
+
+  /* ---------- contadores ---------- */
+  function runCounter(el) {
+    var to = parseFloat(el.dataset.to), dec = parseInt(el.dataset.dec || "0", 10);
+    var render = function (v) {
+      el.textContent = dec > 0 ? v.toFixed(dec) : Math.round(v).toLocaleString("pt-BR");
+    };
+    if (reduced || !M) { render(to); return; }
+    M.animate(0, to, { duration: 1.8, ease: EASE, onUpdate: render });
   }
 
-  /* FAQ */
-  $all(".faq-item").forEach(function (item) {
+  /* ---------- FAQ accordion (funciona com ou sem Motion) ---------- */
+  document.querySelectorAll(".faq-item").forEach(function (item) {
     var btn = item.querySelector(".faq-q");
     var panel = item.querySelector(".faq-a");
     btn.addEventListener("click", function () {
       var opening = !item.classList.contains("open");
       item.classList.toggle("open", opening);
       btn.setAttribute("aria-expanded", opening ? "true" : "false");
-      panel.style.height = opening ? panel.firstElementChild.offsetHeight + "px" : "0px";
+      var target = panel.firstElementChild.offsetHeight;
+      if (M && !reduced) {
+        panel.style.height = panel.offsetHeight + "px";
+        M.animate(panel, { height: opening ? target : 0 }, { duration: 0.32, ease: [0.16, 1, 0.3, 1] })
+          .then(function () {
+            if (opening && item.classList.contains("open")) panel.style.height = "auto";
+          });
+        /* seguro: se o rAF estiver suspenso, entrega o estado final mesmo assim */
+        setTimeout(function () {
+          if (opening && item.classList.contains("open") && panel.offsetHeight < target - 4) panel.style.height = "auto";
+          if (!opening && !item.classList.contains("open")) panel.style.height = "0px";
+        }, 480);
+      } else {
+        panel.style.height = opening ? "auto" : "0px";
+      }
     });
   });
 
-  /* entrada suave das seções (sem IntersectionObserver ou com movimento reduzido: tudo visível) */
-  var reveals = $all(".reveal");
-  if (!hasIO || reduced) {
-    reveals.forEach(function (el) { el.classList.add("in"); });
-  } else {
-    var revIO = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) { e.target.classList.add("in"); revIO.unobserve(e.target); }
-      });
-    }, { rootMargin: "0px 0px -8% 0px" });
-    reveals.forEach(function (el) { revIO.observe(el); });
+  /* ================================================================
+     Motion (Framer Motion para JS): animate / inView / scroll /
+     stagger / press / hover — tudo abaixo depende da lib
+     ================================================================ */
+  /* O HTML já traz o valor final (sem JS não aparece "0"); com JS e movimento liberado, a contagem parte do 0. */
+  if (!reduced) document.querySelectorAll(".count").forEach(function (el) { el.textContent = "0"; });
+  var counterIO = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { runCounter(e.target); counterIO.unobserve(e.target); }
+    });
+  }, { rootMargin: "-60px" });
+  document.querySelectorAll(".count").forEach(function (el) { counterIO.observe(el); });
+
+  if (!M || reduced) {
+    /* fallback: sem lib ou reduced motion → tudo visível, nada quebra */
+    document.documentElement.classList.remove("js");
+    document.querySelectorAll(".letterbox").forEach(function (el) { el.style.display = "none"; });
+    var rf = document.getElementById("routeFill"); if (rf) rf.style.transform = "scaleY(1)";
+    document.querySelectorAll(".step").forEach(function (s) { s.classList.add("active"); });
+    return;
   }
 
-  /* método: linha de progresso e etapas */
-  var route = document.querySelector(".route");
-  var fill = document.getElementById("routeFill");
-  var steps = $all(".step");
-  if (route && fill) {
-    var ticking = false;
-    var update = function () {
-      ticking = false;
-      var vh = window.innerHeight, r = route.getBoundingClientRect();
-      var p = (vh * 0.72 - r.top) / (vh * 0.22 + r.height);
-      p = Math.max(0, Math.min(1, p));
-      fill.style.transform = "scaleY(" + p + ")";
-      steps.forEach(function (st) {
-        st.classList.toggle("active", st.getBoundingClientRect().top < vh * 0.66);
-      });
+  var animate = M.animate, inView = M.inView, scrollFn = M.scroll,
+      stagger = M.stagger, press = M.press, hoverFn = M.hover;
+
+  /* ---------- estados iniciais (anti-FOUC, via JS = sem quebrar no-JS) ---------- */
+  function setInitial(sel, styles) {
+    document.querySelectorAll(sel).forEach(function (el) {
+      for (var k in styles) el.style[k] = styles[k];
+    });
+  }
+  setInitial(".eyebrow, .hero .subtitle, .hero-ctas, .scroll-down", { opacity: "0", transform: "translateY(78px)" });
+  setInitial(".hero-content", { transform: "translateY(96px)" });
+  setInitial(".hero h1 .l span", { transform: "translateY(115%)" });
+  setInitial(".hero-img-wrap", { opacity: "0", transform: "scale(1.14)" });
+  setInitial(".reveal", { opacity: "0", transform: "translateY(46px)" });
+  /* legendas e títulos: reveal mascarado, padrão premium */
+  setInitial(".kicker.reveal", { opacity: "0", transform: "translateX(-16px)", clipPath: "inset(0 100% 0 0)" });
+  setInitial(".title.reveal, .interlude h2.reveal", { opacity: "0", transform: "translateY(44px)", clipPath: "inset(0 0 100% 0)" });
+  setInitial(".feature-card", { opacity: "0", transform: "translateY(60px) rotateX(16deg)" });
+  setInitial(".testi", { opacity: "0", transform: "translateY(55px) rotateX(12deg)" });
+
+  /* ---------- abertura cinematográfica (sequência Motion) ---------- */
+  var INTRO_SEL = ".eyebrow, .hero .subtitle, .hero-ctas, .scroll-down, .hero h1 .l span";
+  var introDone = false;
+  function finishIntroInstant() {
+    if (introDone) return;
+    introDone = true;
+    document.querySelectorAll(".letterbox").forEach(function (el) { el.style.display = "none"; });
+    document.querySelectorAll(INTRO_SEL).forEach(function (el) {
+      el.style.opacity = "1";
+      el.style.transform = "none";
+    });
+    var wrap = document.querySelector(".hero-img-wrap");
+    if (wrap) { wrap.style.opacity = "1"; wrap.style.transform = "scale(1.05)"; }
+    var hc = document.querySelector(".hero-content");
+    if (hc) hc.style.transform = "none";
+    attachHeroScroll();
+  }
+  function playIntro() {
+    animate([
+      [".letterbox.top",    { scaleY: 0 }, { duration: 1.1, ease: [0.87, 0, 0.13, 1], at: 0.15 }],
+      [".letterbox.bottom", { scaleY: 0 }, { duration: 1.1, ease: [0.87, 0, 0.13, 1], at: 0.15 }],
+      [".hero-img-wrap", { opacity: [0, 1], scale: [1.14, 1.05] }, { duration: 1.6, ease: EASE, at: 0.25 }],
+      [".hero-content", { y: [96, 0] }, { duration: 1.5, ease: [0.22, 1, 0.36, 1], at: 0.55 }],
+      [".eyebrow", { opacity: [0, 1], y: [78, 0] }, { duration: 0.75, ease: EASE, at: 0.9 }],
+      [".hero h1 .l span", { y: ["115%", "0%"] }, { duration: 1.25, ease: [0.22, 1, 0.36, 1], delay: stagger(0.17), at: 1.0 }],
+      [".hero .subtitle", { opacity: [0, 1], y: [78, 0] }, { duration: 0.85, ease: EASE, at: 1.55 }],
+      [".hero-ctas", { opacity: [0, 1], y: [78, 0] }, { duration: 0.75, ease: EASE, at: 1.75 }],
+      [".scroll-down", { opacity: [0, 1], y: [78, 0] }, { duration: 0.5, ease: EASE, at: 2.0 }]
+    ]).then(function () { introDone = true; attachHeroScroll(); });
+    /* rede de segurança: aba em segundo plano pausa o rAF — nunca deixar o hero travado */
+    setTimeout(function () {
+      var settled = parseFloat(getComputedStyle(document.querySelector(".hero .subtitle")).opacity) > 0.9;
+      if (!settled) finishIntroInstant();
+    }, 4500);
+  }
+
+  /* ---------- barra de progresso (scroll-linked) ---------- */
+  scrollFn(animate(".scroll-progress", { scaleX: [0, 1] }, { ease: "linear" }));
+  scrollFn(animate("#scrollRailFill", { scaleY: [0, 1] }, { ease: "linear" }));
+
+  /* ---------- ZOOM CINEMATOGRÁFICO: o scroll é a câmera ----------
+     A imagem fica presa em tela cheia por 340vh de rolagem enquanto
+     a câmera avança 1x → 2.6x em direção ao sol no pico. No clímax,
+     um clarão vermelho toma a tela e entrega o restante do site. */
+  var runway = document.getElementById("topo");
+  runway.classList.add("zoom-active");
+  /* O scroll comanda uma SEQUÊNCIA DE 240 FRAMES pintada em canvas
+     (técnica dos sites da Apple): cada posição de rolagem exibe um frame
+     exato, sem depender de seek de vídeo — fluidez máxima.
+     Se os frames falharem, cai para o zoom na imagem — ninguém fica sem hero. */
+  var heroCanvas = document.querySelector(".hero-canvas");
+  var seqOn = false;
+  var scrubTarget = 0;
+  scrollFn(function (progress) { scrubTarget = progress; },
+    { target: runway, offset: ["start start", "end end"] });
+
+  function attachImgZoomFallback() {
+    if (seqOn) return;
+    if (heroCanvas) { heroCanvas.remove(); heroCanvas = null; }
+    scrollFn(animate(".hero-img", { scale: [1, 2.2] }, { ease: "linear" }),
+      { target: runway, offset: ["start start", "end end"] });
+  }
+
+  if (heroCanvas) {
+    var FRAMES = 80;
+    var seq = new Array(FRAMES);
+    var seqLoaded = new Array(FRAMES);
+    var ctx2d = heroCanvas.getContext("2d");
+    var framePos = 0, lastPos = -1;
+
+    var frameSrc = function (i) {
+      var n = String(i);
+      while (n.length < 3) n = "0" + n;
+      return "assets/frames-v2/frame-" + n + ".jpg";
     };
-    window.addEventListener("scroll", function () {
-      if (!ticking) { ticking = true; requestAnimationFrame(update); }
-    }, { passive: true });
-    window.addEventListener("resize", update);
-    update();
+    var nearestLoaded = function (i) {
+      for (var d = 0; d < FRAMES; d++) {
+        if (i - d >= 0 && seqLoaded[i - d]) return i - d;
+        if (i + d < FRAMES && seqLoaded[i + d]) return i + d;
+      }
+      return -1;
+    };
+    var sizeCanvas = function () {
+      var dpr = Math.min(devicePixelRatio || 1, 1.5);
+      heroCanvas.width = Math.round(heroCanvas.clientWidth * dpr);
+      heroCanvas.height = Math.round(heroCanvas.clientHeight * dpr);
+      /* reamostragem de alta qualidade no upscale (resetada a cada resize) */
+      ctx2d.imageSmoothingEnabled = true;
+      ctx2d.imageSmoothingQuality = "high";
+      lastPos = -1; /* força redesenho no próximo tick */
+    };
+    var paintCover = function (img, alpha) {
+      var cw = heroCanvas.width, ch = heroCanvas.height;
+      var s = Math.max(cw / img.width, ch / img.height); /* cover */
+      var dw = img.width * s, dh = img.height * s;
+      /* foco horizontal em 49.4% (coluna do sol/pico): em telas estreitas o
+         recorte centraliza a montanha; em telas largas o clamp mantém tudo igual */
+      var ox = Math.min(0, Math.max(cw - dw, cw * 0.5 - dw * 0.4965));
+      ctx2d.globalAlpha = alpha;
+      ctx2d.drawImage(img, ox, (ch - dh) * 0.42, dw, dh);
+      ctx2d.globalAlpha = 1;
+    };
+    /* desenha a posição fracionária: frame base + frame seguinte em
+       cross-fade — interpola entre os 80 frames e o movimento fica contínuo */
+    var drawFrame = function (pos) {
+      if (!heroCanvas) return;
+      var i0 = Math.floor(pos);
+      var i1 = Math.min(i0 + 1, FRAMES - 1);
+      var base = nearestLoaded(i0);
+      if (base < 0) return;
+      paintCover(seq[base], 1);
+      var f = pos - i0;
+      if (i1 !== base && seqLoaded[i1] && f > 0.02) paintCover(seq[i1], f);
+      lastPos = pos;
+    };
+    var loadFrame = function (i, cb) {
+      if (seq[i]) { if (cb) cb(); return; }
+      var im = new Image();
+      im.onload = function () { seqLoaded[i] = true; if (cb) cb(); };
+      im.onerror = function () { if (cb) cb(); };
+      im.src = frameSrc(i);
+      seq[i] = im;
+    };
+
+    sizeCanvas();
+    addEventListener("resize", sizeCanvas);
+
+    /* carga em 3 ondas: frame 0 já pinta o hero; esqueleto (1 a cada 10)
+       torna o scrub utilizável em segundos; preenchimento completa o resto */
+    loadFrame(0, function () {
+      if (!seqLoaded[0]) return; /* falhou → o setTimeout de segurança resolve */
+      seqOn = true;
+      drawFrame(0);
+      (function tick() {
+        if (!heroCanvas) return;
+        framePos += (scrubTarget * (FRAMES - 1) - framePos) * 0.22; /* lerp */
+        if (lastPos < 0 || Math.abs(framePos - lastPos) > 0.015) drawFrame(framePos);
+        requestAnimationFrame(tick);
+      })();
+    });
+    for (var sk = 8; sk < FRAMES; sk += 8) loadFrame(sk);
+    var fillIdx = 1;
+    (function fillNext() {
+      while (fillIdx < FRAMES && seq[fillIdx]) fillIdx++;
+      if (fillIdx >= FRAMES) return;
+      var i = fillIdx++;
+      loadFrame(i, fillNext);
+    })();
+    /* seguro: se em 8s a sequência não estiver ativa, assume o fallback de imagem */
+    setTimeout(function () { if (!seqOn) attachImgZoomFallback(); }, 8000);
+  } else {
+    attachImgZoomFallback();
   }
 
-  /* botão flutuante do WhatsApp: some enquanto os CTAs do topo estão na tela */
+  scrollFn(animate(".hero-flash", { opacity: [0, 0, 0.98] }, { ease: "linear", times: [0, 0.48, 1] }),
+    { target: runway, offset: ["start start", "end end"] });
+  scrollFn(animate(".hero-shade", { opacity: [1, 1, 0] }, { ease: "linear", times: [0, 0.6, 1] }),
+    { target: runway, offset: ["start start", "end end"] });
+
+  var heroScrollAttached = false;
+  function attachHeroScroll() {
+    if (heroScrollAttached) return;
+    heroScrollAttached = true;
+    /* texto e indicador só entram no timeline de scroll DEPOIS da intro,
+       para o keyframe inicial não atropelar a animação de entrada */
+    /* a mensagem acompanha a escalada e só se dissolve ao alcançar o topo,
+       junto com o clarão do pico */
+    scrollFn(animate(".hero-content", { opacity: [1, 1, 0, 0], y: [0, 0, -110, -110] }, { ease: "linear", times: [0, 0.58, 0.9, 1] }),
+      { target: runway, offset: ["start start", "end end"] });
+    scrollFn(animate(".scroll-down", { opacity: [1, 0, 0] }, { ease: "linear", times: [0, 0.08, 1] }),
+      { target: runway, offset: ["start start", "end end"] });
+  }
+
+  var bootEl = document.getElementById("boot");
+  if (document.hidden) {
+    /* aba carregou em segundo plano: entrega o estado final, sem teatro perdido */
+    if (bootEl) bootEl.style.display = "none";
+    finishIntroInstant();
+  } else {
+    /* hero começa a revelar junto com a subida da cortina de abertura */
+    setTimeout(playIntro, 1350);
+  }
+
+  /* ---------- parallax 3D com mouse ---------- */
+  var fine = window.matchMedia("(pointer: fine)").matches;
+  var hero = document.querySelector(".hero");
+  var heroContent = document.querySelector(".hero-content");
+  var heroImgWrap = document.querySelector(".hero-img-wrap");
+  if (fine) {
+    hero.addEventListener("pointermove", function (e) {
+      if (!introDone) return;
+      var x = (e.clientX / innerWidth - 0.5) * 2;
+      var y = (e.clientY / innerHeight - 0.5) * 2;
+      animate(heroImgWrap, { x: x * 14, y: y * 8 }, { duration: 0.9, ease: EASE });
+      animate(heroContent, { x: x * -10, rotateY: x * 1.6, rotateX: y * -1.4 }, { duration: 0.9, ease: EASE });
+    });
+    hero.addEventListener("pointerleave", function () {
+      if (!introDone) return;
+      animate(heroImgWrap, { x: 0, y: 0 }, SPRING);
+      animate(heroContent, { x: 0, rotateX: 0, rotateY: 0 }, SPRING);
+    });
+  }
+
+  /* ---------- reveals genéricos (inView) + stagger real nas grades ---------- */
+  var STAGGER_PARENTS = ["pain-list", "metrics-grid", "trust-strip", "diff-grid", "fit-grid", "faq-list"];
+  inView(".reveal", function (el) {
+    var delay = 0, p = el.parentElement;
+    if (p) {
+      for (var k = 0; k < STAGGER_PARENTS.length; k++) {
+        if (p.classList.contains(STAGGER_PARENTS[k])) {
+          delay = Array.prototype.indexOf.call(p.children, el) * 0.08;
+          break;
+        }
+      }
+    }
+    if (el.classList.contains("kicker")) {
+      animate(el, { opacity: [0, 1], x: [-16, 0], clipPath: ["inset(0 100% 0 0)", "inset(0 0% 0 0)"] }, { duration: 0.8, ease: EASE, delay: delay });
+    } else if (el.classList.contains("title") || (el.tagName === "H2" && el.closest(".interlude"))) {
+      animate(el, { opacity: [0, 1], y: [44, 0], clipPath: ["inset(0 0 100% 0)", "inset(0 0 0% 0)"] }, { duration: 0.95, ease: EASE, delay: delay });
+    } else {
+      animate(el, { opacity: [0, 1], y: [46, 0] }, { duration: 0.85, ease: EASE, delay: delay });
+    }
+  }, { margin: "0px 0px -12% 0px" });
+
+  /* ---------- cards 3D entram rotacionando ---------- */
+  function revealCards(sel, rot) {
+    var grid = {};
+    document.querySelectorAll(sel).forEach(function (card, i) {
+      inView(card, function () {
+        animate(card,
+          { opacity: [0, 1], y: [60, 0], rotateX: [14, 0] },
+          { duration: 0.8, ease: EASE, delay: (i % 3) * 0.09 });
+      }, { margin: "0px 0px -14% 0px" });
+    });
+  }
+  revealCards(".feature-card");
+  revealCards(".testi");
+
+  /* ---------- tilt 3D + glow nos cards (hover gesture) ---------- */
+  if (fine) {
+    hoverFn(".feature-card", function (el) {
+      var onMove = function (e) {
+        var r = el.getBoundingClientRect();
+        var px = (e.clientX - r.left) / r.width;
+        var py = (e.clientY - r.top) / r.height;
+        el.style.setProperty("--mx", (px * 100) + "%");
+        el.style.setProperty("--my", (py * 100) + "%");
+        animate(el, { rotateY: (px - 0.5) * 10, rotateX: (0.5 - py) * 8, y: -6 }, { duration: 0.3, ease: "easeOut" });
+      };
+      el.addEventListener("pointermove", onMove);
+      return function () {
+        el.removeEventListener("pointermove", onMove);
+        animate(el, { rotateY: 0, rotateX: 0, y: 0 }, SPRING);
+      };
+    });
+
+    /* lift sutil nos cards de diferenciais, fit e trust */
+    hoverFn(".diff-card, .fit-card, .trust", function (el) {
+      animate(el, { y: -6 }, { duration: 0.3, ease: "easeOut" });
+      var ic = el.querySelector(".icon");
+      if (ic) animate(ic, { scale: 1.08, rotate: -4 }, { duration: 0.3, ease: EASE });
+      return function () {
+        animate(el, { y: 0 }, SPRING);
+        if (ic) animate(ic, { scale: 1, rotate: 0 }, SPRING);
+      };
+    });
+
+    /* dores: desliza e o X gira, reforçando o incômodo */
+    hoverFn(".pain-item", function (el) {
+      var ic = el.querySelector("svg");
+      animate(el, { x: 8 }, { duration: 0.25, ease: "easeOut" });
+      if (ic) animate(ic, { rotate: 90, scale: 1.18 }, { duration: 0.35, ease: EASE });
+      return function () {
+        animate(el, { x: 0 }, SPRING);
+        if (ic) animate(ic, { rotate: 0, scale: 1 }, SPRING);
+      };
+    });
+
+    /* métricas: número cresce a partir da borda esquerda */
+    hoverFn(".metric", function (el) {
+      var num = el.querySelector(".num");
+      if (num) {
+        num.style.transformOrigin = "left center";
+        animate(num, { scale: 1.05 }, { duration: 0.3, ease: "easeOut" });
+      }
+      return function () {
+        if (num) animate(num, { scale: 1 }, SPRING);
+      };
+    });
+
+    /* etapas do método: badge acende no hover */
+    hoverFn(".step", function (el) {
+      var badge = el.querySelector(".badge");
+      if (badge) animate(badge, { scale: 1.12 }, { duration: 0.25, ease: "easeOut" });
+      return function () {
+        if (badge) animate(badge, { scale: 1 }, SPRING);
+      };
+    });
+  }
+
+  /* ---------- WhatsApp flutuante: some enquanto os CTAs do hero
+     estão na tela (mobile), evita sobrepor botão/texto ---------- */
   var waFloat = document.querySelector(".wa-float");
   var heroCtas = document.querySelector(".hero-ctas");
-  if (waFloat && heroCtas && hasIO) {
-    new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) { waFloat.classList.toggle("wa-hide", en.isIntersecting); });
-    }, { threshold: 0.1 }).observe(heroCtas);
+  if (waFloat && heroCtas && "IntersectionObserver" in window) {
+    var waIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        waFloat.classList.toggle("wa-hide", entry.isIntersecting);
+      });
+    }, { threshold: 0.1 });
+    waIO.observe(heroCtas);
   }
-})();
+
+  /* ---------- press feedback (scale 0.97, HIG) ---------- */
+  press(".btn-primary, .btn-ghost, .nav-cta, .wa-float", function (el) {
+    animate(el, { scale: 0.97 }, { duration: 0.12, ease: "easeOut" });
+    return function () { animate(el, { scale: 1 }, SPRING); };
+  });
+
+  /* ---------- rota até o topo: linha desenha no scroll ---------- */
+  var route = document.querySelector(".route");
+  scrollFn(animate("#routeFill", { scaleY: [0, 1] }, { ease: "linear" }),
+    { target: route, offset: ["start 0.72", "end 0.5"] });
+  document.querySelectorAll(".step").forEach(function (step) {
+    inView(step, function () {
+      step.classList.add("active");
+      return function () { step.classList.remove("active"); };
+    }, { margin: "0px 0px -34% 0px" });
+  });
+
+  /* ---------- seguro anti-conteúdo-invisível: se algum reveal na viewport
+     seguir oculto (IO falhou/atrasou), revela à força ---------- */
+  setInterval(function () {
+    document.querySelectorAll(".reveal, .feature-card, .testi").forEach(function (el) {
+      if (parseFloat(getComputedStyle(el).opacity) > 0.05) return;
+      var r = el.getBoundingClientRect();
+      if (r.top < innerHeight && r.bottom > 0) {
+        animate(el, { opacity: 1, y: 0, x: 0, rotateX: 0, clipPath: "inset(0 0% 0% 0)" }, { duration: 0.7, ease: EASE });
+      }
+    });
+    document.querySelectorAll(".count").forEach(function (el) {
+      var r = el.getBoundingClientRect();
+      if (el.textContent === "0" && r.top < innerHeight && r.bottom > 0) runCounter(el);
+    });
+  }, 3000);
+
+  /* ---------- luz ambiente + respiração do CTA ---------- */
+  /* ---------- parallax das imagens de fundo (interlúdio + CTA) ---------- */
+  document.querySelectorAll(".interlude-bg, .cta-bg").forEach(function (bg) {
+    scrollFn(animate(bg, { y: [-50, 50] }, { ease: "linear" }),
+      { target: bg.closest("section"), offset: ["start end", "end start"] });
+  });
+
+  document.querySelectorAll("[data-drift]").forEach(function (el, i) {
+    animate(el,
+      { x: [0, i % 2 ? -46 : 46, 0], y: [0, 30, 0] },
+      { duration: 14 + i * 3, repeat: Infinity, ease: "easeInOut" });
+  });
+  animate(".cta-glow",
+    { scale: [1, 1.12, 1], opacity: [0.7, 1, 0.7] },
+    { duration: 6, repeat: Infinity, ease: "easeInOut" });
+});
 </script>
 </body>
-
 </html>
