@@ -27,3 +27,9 @@ Nada foi publicado em produção. Alterações apenas nesta branch (commit local
 ## Performance / acessibilidade
 - Removido código morto do hero (80 requisições a `assets/frames-v2/*` davam 404; o visual já era o fallback de zoom).
 - Google Fonts sem bloqueio de renderização; contraste do marquee corrigido (2,6 → ~5:1).
+
+## Pós-revisão independente
+- Recusar/revogar consentimento agora nega `analytics_storage` na sessão e apaga cookies `_ga*`.
+- HSTS sem `preload` (difícil de reverter; avaliar depois que todos os subdomínios tiverem HTTPS).
+- Pendentes (dependem do Miguel): ID real do GA4; CNPJ/razão social na política de privacidade.
+- Observação: `generate_lead` é o único evento a marcar como conversão (`whatsapp_click`/`email_click` são complementares).

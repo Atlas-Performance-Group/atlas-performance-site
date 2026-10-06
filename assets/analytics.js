@@ -74,6 +74,20 @@
     });
   }, { passive: true });
 
+  /* revoga: nega o consentimento na sessão e apaga os cookies _ga* */
+  function revoke() {
+    gtag("consent", "update", { analytics_storage: "denied" });
+    loaded = false;
+    var host = location.hostname.split("."), doms = [location.hostname];
+    for (var i = 1; i < host.length - 1; i++) doms.push("." + host.slice(i).join("."));
+    document.cookie.split(";").forEach(function (c) {
+      var n = c.split("=")[0].trim();
+      if (n.indexOf("_ga") !== 0) return;
+      doms.forEach(function (dm) { document.cookie = n + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=" + dm; });
+      document.cookie = n + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+    });
+  }
+
   /* ---------- banner de cookies ---------- */
   function banner() {
     var st = document.createElement("style");
@@ -90,7 +104,10 @@
     d.innerHTML = '<p>Usamos cookies de análise (Google Analytics) para entender como o site é usado e melhorar a sua experiência. Você escolhe. Saiba mais na <a href="/politica-de-privacidade/">Política de Privacidade</a>.</p>' +
       '<div class="r"><button type="button" class="y" id="ck-y">Aceitar</button><button type="button" id="ck-n">Recusar</button></div>';
     document.body.appendChild(d);
-    function close(v) { write(v); d.remove(); if (v === "granted") load(); }
+    function close(v) {
+      write(v); d.remove();
+      if (v === "granted") load(); else revoke();
+    }
     document.getElementById("ck-y").onclick = function () { close("granted"); };
     document.getElementById("ck-n").onclick = function () { close("denied"); };
   }
@@ -100,6 +117,7 @@
     if (!l) return;
     ev.preventDefault();
     try { localStorage.removeItem(KEY); } catch (e) {}
+    revoke();
     if (!document.getElementById("ck")) banner();
   });
 
