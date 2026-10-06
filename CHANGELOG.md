@@ -39,3 +39,6 @@ Nada foi publicado em produção. Alterações apenas nesta branch (commit local
 - E-mail voltou para `comercial.atlasperformance@gmail.com` (única caixa existente). Quando houver e-mail próprio, trocar com um único find/replace.
 - Herbalife removida temporariamente dos cases (a pedido do Miguel); reincluir após confirmar texto.
 - Menu/rodapé: 'Resultados'→'Transparência', 'Provas'→'Cases' (coerência com o conteúdo atual).
+- Fontes (Barlow Condensed e Sora, subset latin) hospedadas em `assets/fonts/` + `assets/fonts.css`: sem requisição ao Google Fonts (mais rápido e melhor para LGPD). CSP sem domínios do Google Fonts.
+- Animação de abertura da home ~2x mais rápida (cortina 1,5s→0,4s; sequência do hero comprimida), mesma coreografia.
+- Resultado local (mobile): páginas de serviço 99-100; home 82-90 (oscila).
