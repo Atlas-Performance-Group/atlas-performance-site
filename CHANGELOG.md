@@ -38,3 +38,4 @@ Nada foi publicado em produção. Alterações apenas nesta branch (commit local
 - O Miguel confirmou que o domínio do site é `atlasperformancegroup.vercel.app` (não há domínio próprio). Revertidos canonical, og, schema, sitemap, robots e llms.txt para esse endereço.
 - E-mail voltou para `comercial.atlasperformance@gmail.com` (única caixa existente). Quando houver e-mail próprio, trocar com um único find/replace.
 - Herbalife removida temporariamente dos cases (a pedido do Miguel); reincluir após confirmar texto.
+- Menu/rodapé: 'Resultados'→'Transparência', 'Provas'→'Cases' (coerência com o conteúdo atual).
