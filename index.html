@@ -15,13 +15,13 @@
 <meta property="og:locale" content="pt_BR"/>
 <meta property="og:url" content="https://atlasperformancegroup.vercel.app/"/>
 <meta property="og:site_name" content="Atlas Performance"/>
-<meta property="og:image" content="https://atlasperformancegroup.vercel.app/assets/hero.jpg"/>
-<meta property="og:image:width" content="1536"/>
-<meta property="og:image:height" content="1024"/>
+<meta property="og:image" content="https://atlasperformancegroup.vercel.app/assets/og.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="Atlas Performance Group | Sites e Tráfego Pago que vendem"/>
 <meta name="twitter:description" content="Sites de alta conversão e tráfego pago no Google, Meta e TikTok Ads. Duas alavancas, um só objetivo: encher a sua agenda de clientes."/>
-<meta name="twitter:image" content="https://atlasperformancegroup.vercel.app/assets/hero.jpg"/>
+<meta name="twitter:image" content="https://atlasperformancegroup.vercel.app/assets/og.jpg"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -29,8 +29,8 @@
   "name": "Atlas Performance",
   "alternateName": "Atlas Performance Group",
   "url": "https://atlasperformancegroup.vercel.app/",
-  "logo": "https://atlasperformancegroup.vercel.app/assets/logo.jpg",
-  "image": "https://atlasperformancegroup.vercel.app/assets/hero.jpg",
+  "logo": "https://atlasperformancegroup.vercel.app/assets/logo-512.jpg",
+  "image": "https://atlasperformancegroup.vercel.app/assets/og.jpg",
   "description": "Agência de performance especializada em sites institucionais de alta conversão e gestão de tráfego pago (Google Ads, Meta Ads e TikTok Ads), criativos e produção de vídeo para empresas que já vendem e querem escalar.",
   "email": "comercial.atlasperformance@gmail.com",
   "telephone": "+5511958031583",
@@ -109,14 +109,12 @@
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/sora-300.woff2" crossorigin/>
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/barlow-condensed-800.woff2" crossorigin/>
 <link rel="stylesheet" href="/assets/fonts.css"/>
-<link rel="preload" as="image" href="assets/hero.webp" type="image/webp" fetchpriority="high"/>
 <script>
 /* marca JS ativo antes do primeiro paint: o hero nasce oculto e SÓ aparece animando.
    Se a lib de animação não chegar em 6s, libera tudo visível (nunca some conteúdo). */
 document.documentElement.classList.add("js");
 setTimeout(function () { if (!window.Motion) document.documentElement.classList.remove("js"); }, 6000);
 </script>
-<script defer src="/assets/vendor/motion-12.23.6.js"></script>
 <style>
 /* ============ TOKENS ============ */
 :root{
@@ -656,6 +654,28 @@ h2.title .dim{color:transparent;-webkit-text-stroke:1.5px rgba(245,244,242,.5)}
   *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
   html:focus-within{scroll-behavior:auto}
 }
+
+/* ============ VISUAL SÓBRIO (confiança) ============
+   Sem imagens geradas, brilhos, cortina de abertura, grão, vinheta,
+   inclinação 3D ou texto vazado. Mantém a identidade vermelho/preto. */
+#boot,.letterbox,.grain,.vignette,.scroll-progress,.scroll-rail,.ambient,.cta-glow,.cta-bg,.hero-shade,.hero-flash,.hero-img-wrap,.scroll-down{display:none!important}
+.hero-runway,.hero-runway.zoom-active{height:auto}
+.hero{position:relative;height:auto;min-height:100svh;padding:132px var(--s-4) 88px;
+  background:radial-gradient(ellipse 85% 60% at 50% 0%,rgba(225,6,0,.22),transparent 72%),#0a0a0a}
+.hero-logo{display:block;width:104px;height:104px;margin:0 auto var(--s-5);border-radius:20px;box-shadow:0 0 0 1px rgba(255,255,255,.08)}
+.js .hero h1 .l span{transform:none}
+.js .eyebrow,.js .hero .subtitle,.js .hero-ctas{opacity:1;transform:none}
+.js .hero-content{transform:none}
+.hero h1{filter:none}
+.hero .subtitle{text-shadow:none}
+.js .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}}
+h2.title .dim{color:#a39da1;-webkit-text-stroke:0}
+.marquee{width:auto;animation:none;flex-wrap:wrap;justify-content:center;gap:14px 56px;padding:0 var(--s-4)}
+.feature-card::before{display:none}
+.faq-a{transition:height .3s ease}
+.closing-cta{background:linear-gradient(180deg,#0e0d0f 0%,#140a0a 100%)}
 </style>
 <script defer src="/assets/analytics.js"></script>
 </head>
@@ -663,18 +683,6 @@ h2.title .dim{color:transparent;-webkit-text-stroke:1.5px rgba(245,244,242,.5)}
 
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-<div id="boot" aria-hidden="true">
-  <svg class="boot-mark" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 6 27 26H5Z" fill="#e10600"/><path d="M16 13l5.5 10h-11Z" fill="#050505"/></svg>
-  <p class="boot-word"><span>Atlas <b>Performance</b></span></p>
-  <div class="boot-line"><i></i></div>
-</div>
-
-<div class="letterbox top" aria-hidden="true"></div>
-<div class="letterbox bottom" aria-hidden="true"></div>
-<div class="grain" aria-hidden="true"></div>
-<div class="vignette" aria-hidden="true"></div>
-<div class="scroll-progress" aria-hidden="true"></div>
-<div class="scroll-rail" aria-hidden="true"><i class="scroll-rail-fill" id="scrollRailFill"></i></div>
 
 <header class="site-header" id="siteHeader">
   <a class="brand" href="#topo" aria-label="Atlas Performance Group, início">
@@ -688,7 +696,6 @@ h2.title .dim{color:transparent;-webkit-text-stroke:1.5px rgba(245,244,242,.5)}
     <a href="#servicos" data-spy="servicos">Serviços</a>
     <a href="#resultados" data-spy="resultados">Transparência</a>
     <a href="#metodo" data-spy="metodo">Método</a>
-    <a href="#provas" data-spy="provas">Cases</a>
     <a class="nav-cta" href="#contato">Falar com especialista</a>
   </nav>
 </header>
@@ -698,16 +705,8 @@ h2.title .dim{color:transparent;-webkit-text-stroke:1.5px rgba(245,244,242,.5)}
 <!-- ============ HERO ============ -->
 <section class="hero-runway" id="topo">
   <div class="hero">
-    <div class="hero-img-wrap">
-      <picture>
-        <source srcset="assets/hero.webp" type="image/webp"/>
-        <img class="hero-img" src="assets/hero.jpg" alt="Montanha sob um céu vermelho com um sol brilhando exatamente no pico" width="1536" height="1024" fetchpriority="high"/>
-      </picture>
-    </div>
-    <div class="hero-shade" aria-hidden="true"></div>
-    <div class="hero-flash" aria-hidden="true"></div>
-
     <div class="hero-content">
+      <picture><source srcset="assets/logo-512.webp" type="image/webp"/><img class="hero-logo" src="assets/logo-512.jpg" alt="Logo Atlas Performance Group" width="104" height="104"/></picture>
       <span class="eyebrow">Sites <b>•</b> Tráfego Pago</span>
       <h1>
         <span class="l"><span class="fill">Seu site e seus anúncios,</span></span>
@@ -722,19 +721,14 @@ h2.title .dim{color:transparent;-webkit-text-stroke:1.5px rgba(245,244,242,.5)}
       </div>
     </div>
 
-    <div class="scroll-down" aria-hidden="true">
-      <span>Role para subir</span>
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-    </div>
   </div>
 </section>
 
 <!-- ============ MARQUEE ============ -->
 <div class="marquee-wrap" aria-label="Plataformas que operamos">
-  <p class="marquee-label">Onde os seus clientes estão todos os dias. E onde vamos buscá-los</p>
+  <p class="marquee-label">Plataformas em que atuamos</p>
   <div class="marquee">
-    <span>Google Ads</span><span>Meta Ads</span><span>TikTok Ads</span><span>Google Analytics 4</span><span>HubSpot</span><span>RD Station</span>
-    <span>Google Ads</span><span>Meta Ads</span><span>TikTok Ads</span><span>Google Analytics 4</span><span>HubSpot</span><span>RD Station</span>
+    <span>Google Ads</span><span>Meta Ads</span><span>TikTok Ads</span><span>Google Analytics 4</span>
   </div>
 </div>
 
@@ -756,7 +750,6 @@ h2.title .dim{color:transparent;-webkit-text-stroke:1.5px rgba(245,244,242,.5)}
 
 <!-- ============ METRICS ============ -->
 <section class="metrics section-pad" id="resultados">
-  <div class="ambient" style="top:-20%;right:-15%" data-drift></div>
   <div class="container">
     <span class="kicker reveal">Como é trabalhar com a Atlas</span>
     <h2 class="title reveal">Transparência <span class="dim">do primeiro ao último dia</span></h2>
@@ -780,7 +773,6 @@ h2.title .dim{color:transparent;-webkit-text-stroke:1.5px rgba(245,244,242,.5)}
 
 <!-- ============ SERVICES ============ -->
 <section class="features section-pad" id="servicos">
-  <div class="ambient" style="bottom:-25%;left:-18%" data-drift></div>
   <div class="container">
     <span class="kicker reveal">O que vendemos</span>
     <h2 class="title reveal">Do anúncio ao site, <span class="dim">tudo no mesmo time</span></h2>
@@ -808,7 +800,7 @@ h2.title .dim{color:transparent;-webkit-text-stroke:1.5px rgba(245,244,242,.5)}
       <article class="feature-card"><span class="n" aria-hidden="true">04</span>
         <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.9 5.7L19.6 10l-5.7 1.9L12 17.6l-1.9-5.7L4.4 10l5.7-1.9Z"/><path d="M19 15l.9 2.6L22.5 18l-2.6.9L19 21.5l-.9-2.6L15.5 18l2.6-.9Z"/></svg></div>
         <p class="kick">Institucional de alta conversão</p><h3><a href="/sites-institucionais/">Sites Institucionais</a></h3>
-        <p>Seu site deixa de ser cartão de visita e vira vendedor. Construído com IA, no ar em dias, não meses.</p>
+        <p>Seu site deixa de ser cartão de visita e vira vendedor. Feito sob medida pelo nosso time, pensado para quem chega de um anúncio.</p>
         <a class="card-more" href="/sites-institucionais/">Saiba mais →</a>
       </article>
       <article class="feature-card"><span class="n" aria-hidden="true">05</span>
@@ -833,22 +825,6 @@ h2.title .dim{color:transparent;-webkit-text-stroke:1.5px rgba(245,244,242,.5)}
   </div>
 </section>
 
-<!-- ============ INTERLUDE: MANIFESTO ============ -->
-<section class="interlude" aria-label="Manifesto Atlas">
-  <div class="interlude-bg" aria-hidden="true">
-    <picture>
-      <source srcset="assets/bg-climber.webp" type="image/webp"/>
-      <img src="assets/bg-climber.jpg" alt="" width="1672" height="941" loading="lazy" class="climber-img"/>
-    </picture>
-  </div>
-  <div class="container">
-    <span class="kicker reveal">Manifesto Atlas</span>
-    <h2 class="reveal">O vale está cheio.<br/>O topo tem <span class="red">vaga.</span></h2>
-    <p class="reveal">A subida é íngreme, e cada erro na encosta custa caro. A diferença entre cair e chegar é ter quem já conhece o caminho segurando a corda com você.</p>
-    <p class="interlude-scarcity reveal">Abrimos vagas limitadas por mês: atenção de verdade não escala.</p>
-  </div>
-</section>
-
 <!-- ============ PROCESS ============ -->
 <section class="process section-pad" id="metodo">
   <div class="container">
@@ -864,19 +840,6 @@ h2.title .dim{color:transparent;-webkit-text-stroke:1.5px rgba(245,244,242,.5)}
         <div class="step reveal"><span class="badge" aria-hidden="true">03</span><h3>Execução</h3><p>Site no ar, campanhas rodando, criativos testados. E você acompanhando tudo sem precisar gerenciar ninguém.</p></div>
         <div class="step reveal"><span class="badge" aria-hidden="true">04</span><h3>Otimização &amp; Escala</h3><p>Cada semana, um degrau: teste de criativo, ajuste de funil, otimização do site. Crescer deixa de ser evento e vira rotina.</p></div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ TESTIMONIALS ============ -->
-<section class="social section-pad" id="provas">
-  <div class="container">
-    <span class="kicker reveal">Cases Atlas</span>
-    <h2 class="title reveal">Quem já sobe <span class="dim">com a gente</span></h2>
-    <p class="section-sub reveal">Produtoras que confiam à Atlas o seu tráfego, os seus criativos e a sua presença digital.</p>
-    <div class="testi-grid">
-      <article class="testi"><div class="who"><b>Experience Films</b><span>Produtora audiovisual</span></div></article>
-      <article class="testi"><div class="who"><b>Binnos Films</b><span>Produtora audiovisual</span></div></article>
     </div>
   </div>
 </section>
@@ -900,8 +863,8 @@ h2.title .dim{color:transparent;-webkit-text-stroke:1.5px rgba(245,244,242,.5)}
       </div>
       <div class="diff-card reveal">
         <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg></div>
-        <h3>Tecnologia própria + IA aplicada</h3>
-        <p>Sua operação anda mais rápido e custa menos. Inteligência artificial construindo seu site e otimizando cada real investido em mídia. Todos os dias, sem hora extra.</p>
+        <h3>Acompanhamento de perto, toda semana</h3>
+        <p>Você tem um gestor dedicado no WhatsApp e recebe o relatório toda segunda-feira. Quando algo precisa mudar, a gente avisa e ajusta.</p>
       </div>
     </div>
   </div>
@@ -973,13 +936,6 @@ h2.title .dim{color:transparent;-webkit-text-stroke:1.5px rgba(245,244,242,.5)}
 
 <!-- ============ FINAL CTA ============ -->
 <section class="closing-cta section-pad" id="contato">
-  <div class="cta-bg" aria-hidden="true">
-    <picture>
-      <source srcset="assets/bg-horizon.webp" type="image/webp"/>
-      <img src="assets/bg-horizon.jpg" alt="" width="1536" height="1024" loading="lazy"/>
-    </picture>
-  </div>
-  <div class="cta-glow" aria-hidden="true" data-breathe></div>
   <div class="container cta-grid">
     <div>
       <span class="kicker reveal">O pico está logo ali</span>
@@ -1047,387 +1003,94 @@ h2.title .dim{color:transparent;-webkit-text-stroke:1.5px rgba(245,244,242,.5)}
 </a>
 
 <script>
-window.addEventListener("DOMContentLoaded", function () {
+(function () {
   "use strict";
   var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var M = window.Motion;
-  var EASE = [0.16, 1, 0.3, 1];              /* expo-out — token global de easing */
-  var SPRING = { type: "spring", stiffness: 90, damping: 20 };
+  var hasIO = "IntersectionObserver" in window;
+  function $all(sel) { return Array.prototype.slice.call(document.querySelectorAll(sel)); }
 
-  /* ---------- header sólido ---------- */
+  /* header sólido ao rolar */
   var header = document.getElementById("siteHeader");
-  addEventListener("scroll", function () {
-    header.classList.toggle("solid", scrollY > 40);
-  }, { passive: true });
+  function onScroll() { header.classList.toggle("solid", window.scrollY > 40); }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
 
-  /* ---------- scrollspy (nav-state-active) ---------- */
-  var spyLinks = document.querySelectorAll("[data-spy]");
-  var spyIO = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) {
-      if (e.isIntersecting) {
+  /* item ativo do menu */
+  var spyLinks = $all("[data-spy]");
+  if (hasIO) {
+    var spyIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
         spyLinks.forEach(function (a) {
           var on = a.dataset.spy === e.target.id;
           a.classList.toggle("active", on);
           if (on) a.setAttribute("aria-current", "true"); else a.removeAttribute("aria-current");
         });
-      }
+      });
+    }, { rootMargin: "-40% 0px -55% 0px" });
+    ["servicos", "resultados", "metodo"].forEach(function (id) {
+      var el = document.getElementById(id); if (el) spyIO.observe(el);
     });
-  }, { rootMargin: "-40% 0px -55% 0px" });
-  ["servicos", "resultados", "metodo", "provas"].forEach(function (id) {
-    var el = document.getElementById(id); if (el) spyIO.observe(el);
-  });
-
-  /* ---------- contadores ---------- */
-  function runCounter(el) {
-    var to = parseFloat(el.dataset.to), dec = parseInt(el.dataset.dec || "0", 10);
-    var render = function (v) {
-      el.textContent = dec > 0 ? v.toFixed(dec) : Math.round(v).toLocaleString("pt-BR");
-    };
-    if (reduced || !M) { render(to); return; }
-    M.animate(0, to, { duration: 1.8, ease: EASE, onUpdate: render });
   }
 
-  /* ---------- FAQ accordion (funciona com ou sem Motion) ---------- */
-  document.querySelectorAll(".faq-item").forEach(function (item) {
+  /* FAQ */
+  $all(".faq-item").forEach(function (item) {
     var btn = item.querySelector(".faq-q");
     var panel = item.querySelector(".faq-a");
     btn.addEventListener("click", function () {
       var opening = !item.classList.contains("open");
       item.classList.toggle("open", opening);
       btn.setAttribute("aria-expanded", opening ? "true" : "false");
-      var target = panel.firstElementChild.offsetHeight;
-      if (M && !reduced) {
-        panel.style.height = panel.offsetHeight + "px";
-        M.animate(panel, { height: opening ? target : 0 }, { duration: 0.32, ease: [0.16, 1, 0.3, 1] })
-          .then(function () {
-            if (opening && item.classList.contains("open")) panel.style.height = "auto";
-          });
-        /* seguro: se o rAF estiver suspenso, entrega o estado final mesmo assim */
-        setTimeout(function () {
-          if (opening && item.classList.contains("open") && panel.offsetHeight < target - 4) panel.style.height = "auto";
-          if (!opening && !item.classList.contains("open")) panel.style.height = "0px";
-        }, 480);
-      } else {
-        panel.style.height = opening ? "auto" : "0px";
-      }
+      panel.style.height = opening ? panel.firstElementChild.offsetHeight + "px" : "0px";
     });
   });
 
-  /* ================================================================
-     Motion (Framer Motion para JS): animate / inView / scroll /
-     stagger / press / hover — tudo abaixo depende da lib
-     ================================================================ */
-  /* O HTML já traz o valor final (sem JS não aparece "0"); com JS e movimento liberado, a contagem parte do 0. */
-  if (!reduced) document.querySelectorAll(".count").forEach(function (el) { el.textContent = "0"; });
-  var counterIO = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) {
-      if (e.isIntersecting) { runCounter(e.target); counterIO.unobserve(e.target); }
-    });
-  }, { rootMargin: "-60px" });
-  document.querySelectorAll(".count").forEach(function (el) { counterIO.observe(el); });
-
-  if (!M || reduced) {
-    /* fallback: sem lib ou reduced motion → tudo visível, nada quebra */
-    document.documentElement.classList.remove("js");
-    document.querySelectorAll(".letterbox").forEach(function (el) { el.style.display = "none"; });
-    var rf = document.getElementById("routeFill"); if (rf) rf.style.transform = "scaleY(1)";
-    document.querySelectorAll(".step").forEach(function (s) { s.classList.add("active"); });
-    return;
-  }
-
-  var animate = M.animate, inView = M.inView, scrollFn = M.scroll,
-      stagger = M.stagger, press = M.press, hoverFn = M.hover;
-
-  /* ---------- estados iniciais (anti-FOUC, via JS = sem quebrar no-JS) ---------- */
-  function setInitial(sel, styles) {
-    document.querySelectorAll(sel).forEach(function (el) {
-      for (var k in styles) el.style[k] = styles[k];
-    });
-  }
-  setInitial(".eyebrow, .hero .subtitle, .hero-ctas, .scroll-down", { opacity: "0", transform: "translateY(78px)" });
-  setInitial(".hero-content", { transform: "translateY(96px)" });
-  setInitial(".hero h1 .l span", { transform: "translateY(115%)" });
-  setInitial(".hero-img-wrap", { opacity: "0", transform: "scale(1.14)" });
-  setInitial(".reveal", { opacity: "0", transform: "translateY(46px)" });
-  /* legendas e títulos: reveal mascarado, padrão premium */
-  setInitial(".kicker.reveal", { opacity: "0", transform: "translateX(-16px)", clipPath: "inset(0 100% 0 0)" });
-  setInitial(".title.reveal, .interlude h2.reveal", { opacity: "0", transform: "translateY(44px)", clipPath: "inset(0 0 100% 0)" });
-  setInitial(".feature-card", { opacity: "0", transform: "translateY(60px) rotateX(16deg)" });
-  setInitial(".testi", { opacity: "0", transform: "translateY(55px) rotateX(12deg)" });
-
-  /* ---------- abertura cinematográfica (sequência Motion) ---------- */
-  var INTRO_SEL = ".eyebrow, .hero .subtitle, .hero-ctas, .scroll-down, .hero h1 .l span";
-  var introDone = false;
-  function finishIntroInstant() {
-    if (introDone) return;
-    introDone = true;
-    document.querySelectorAll(".letterbox").forEach(function (el) { el.style.display = "none"; });
-    document.querySelectorAll(INTRO_SEL).forEach(function (el) {
-      el.style.opacity = "1";
-      el.style.transform = "none";
-    });
-    var wrap = document.querySelector(".hero-img-wrap");
-    if (wrap) { wrap.style.opacity = "1"; wrap.style.transform = "scale(1.05)"; }
-    var hc = document.querySelector(".hero-content");
-    if (hc) hc.style.transform = "none";
-    attachHeroScroll();
-  }
-  function playIntro() {
-    animate([
-      [".letterbox.top",    { scaleY: 0 }, { duration: 0.7, ease: [0.87, 0, 0.13, 1], at: 0.05 }],
-      [".letterbox.bottom", { scaleY: 0 }, { duration: 0.7, ease: [0.87, 0, 0.13, 1], at: 0.05 }],
-      [".hero-img-wrap", { opacity: [0, 1], scale: [1.14, 1.05] }, { duration: 1.0, ease: EASE, at: 0.1 }],
-      [".hero-content", { y: [96, 0] }, { duration: 0.9, ease: [0.22, 1, 0.36, 1], at: 0.2 }],
-      [".eyebrow", { opacity: [0, 1], y: [78, 0] }, { duration: 0.5, ease: EASE, at: 0.3 }],
-      [".hero h1 .l span", { y: ["115%", "0%"] }, { duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: stagger(0.1), at: 0.35 }],
-      [".hero .subtitle", { opacity: [0, 1], y: [78, 0] }, { duration: 0.55, ease: EASE, at: 0.8 }],
-      [".hero-ctas", { opacity: [0, 1], y: [78, 0] }, { duration: 0.5, ease: EASE, at: 0.95 }],
-      [".scroll-down", { opacity: [0, 1], y: [78, 0] }, { duration: 0.4, ease: EASE, at: 1.1 }]
-    ]).then(function () { introDone = true; attachHeroScroll(); });
-    /* rede de segurança: aba em segundo plano pausa o rAF — nunca deixar o hero travado */
-    setTimeout(function () {
-      var settled = parseFloat(getComputedStyle(document.querySelector(".hero .subtitle")).opacity) > 0.9;
-      if (!settled) finishIntroInstant();
-    }, 4500);
-  }
-
-  /* ---------- barra de progresso (scroll-linked) ---------- */
-  scrollFn(animate(".scroll-progress", { scaleX: [0, 1] }, { ease: "linear" }));
-  scrollFn(animate("#scrollRailFill", { scaleY: [0, 1] }, { ease: "linear" }));
-
-  /* ---------- ZOOM CINEMATOGRÁFICO: o scroll é a câmera ----------
-     A imagem fica presa em tela cheia por 340vh de rolagem enquanto
-     a câmera avança 1x → 2.6x em direção ao sol no pico. No clímax,
-     um clarão vermelho toma a tela e entrega o restante do site. */
-  var runway = document.getElementById("topo");
-  runway.classList.add("zoom-active");
-  /* O scroll comanda uma SEQUÊNCIA DE 240 FRAMES pintada em canvas
-     (técnica dos sites da Apple): cada posição de rolagem exibe um frame
-     exato, sem depender de seek de vídeo — fluidez máxima.
-     Se os frames falharem, cai para o zoom na imagem — ninguém fica sem hero. */
-  var heroCanvas = document.querySelector(".hero-canvas");
-  var seqOn = false;
-  var scrubTarget = 0;
-  scrollFn(function (progress) { scrubTarget = progress; },
-    { target: runway, offset: ["start start", "end end"] });
-
-  function attachImgZoomFallback() {
-    if (seqOn) return;
-    if (heroCanvas) { heroCanvas.remove(); heroCanvas = null; }
-    scrollFn(animate(".hero-img", { scale: [1, 2.2] }, { ease: "linear" }),
-      { target: runway, offset: ["start start", "end end"] });
-  }
-
-  attachImgZoomFallback();
-
-  scrollFn(animate(".hero-flash", { opacity: [0, 0, 0.98] }, { ease: "linear", times: [0, 0.48, 1] }),
-    { target: runway, offset: ["start start", "end end"] });
-  scrollFn(animate(".hero-shade", { opacity: [1, 1, 0] }, { ease: "linear", times: [0, 0.6, 1] }),
-    { target: runway, offset: ["start start", "end end"] });
-
-  var heroScrollAttached = false;
-  function attachHeroScroll() {
-    if (heroScrollAttached) return;
-    heroScrollAttached = true;
-    /* texto e indicador só entram no timeline de scroll DEPOIS da intro,
-       para o keyframe inicial não atropelar a animação de entrada */
-    /* a mensagem acompanha a escalada e só se dissolve ao alcançar o topo,
-       junto com o clarão do pico */
-    scrollFn(animate(".hero-content", { opacity: [1, 1, 0, 0], y: [0, 0, -110, -110] }, { ease: "linear", times: [0, 0.58, 0.9, 1] }),
-      { target: runway, offset: ["start start", "end end"] });
-    scrollFn(animate(".scroll-down", { opacity: [1, 0, 0] }, { ease: "linear", times: [0, 0.08, 1] }),
-      { target: runway, offset: ["start start", "end end"] });
-  }
-
-  var bootEl = document.getElementById("boot");
-  if (document.hidden) {
-    /* aba carregou em segundo plano: entrega o estado final, sem teatro perdido */
-    if (bootEl) bootEl.style.display = "none";
-    finishIntroInstant();
+  /* entrada suave das seções (sem IntersectionObserver ou com movimento reduzido: tudo visível) */
+  var reveals = $all(".reveal");
+  if (!hasIO || reduced) {
+    reveals.forEach(function (el) { el.classList.add("in"); });
   } else {
-    /* hero começa a revelar junto com a subida da cortina de abertura */
-    setTimeout(playIntro, 250);
+    var revIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("in"); revIO.unobserve(e.target); }
+      });
+    }, { rootMargin: "0px 0px -8% 0px" });
+    reveals.forEach(function (el) { revIO.observe(el); });
   }
 
-  /* ---------- parallax 3D com mouse ---------- */
-  var fine = window.matchMedia("(pointer: fine)").matches;
-  var hero = document.querySelector(".hero");
-  var heroContent = document.querySelector(".hero-content");
-  var heroImgWrap = document.querySelector(".hero-img-wrap");
-  if (fine) {
-    hero.addEventListener("pointermove", function (e) {
-      if (!introDone) return;
-      var x = (e.clientX / innerWidth - 0.5) * 2;
-      var y = (e.clientY / innerHeight - 0.5) * 2;
-      animate(heroImgWrap, { x: x * 14, y: y * 8 }, { duration: 0.9, ease: EASE });
-      animate(heroContent, { x: x * -10, rotateY: x * 1.6, rotateX: y * -1.4 }, { duration: 0.9, ease: EASE });
-    });
-    hero.addEventListener("pointerleave", function () {
-      if (!introDone) return;
-      animate(heroImgWrap, { x: 0, y: 0 }, SPRING);
-      animate(heroContent, { x: 0, rotateX: 0, rotateY: 0 }, SPRING);
-    });
+  /* método: linha de progresso e etapas */
+  var route = document.querySelector(".route");
+  var fill = document.getElementById("routeFill");
+  var steps = $all(".step");
+  if (route && fill) {
+    var ticking = false;
+    var update = function () {
+      ticking = false;
+      var vh = window.innerHeight, r = route.getBoundingClientRect();
+      var p = (vh * 0.72 - r.top) / (vh * 0.22 + r.height);
+      p = Math.max(0, Math.min(1, p));
+      fill.style.transform = "scaleY(" + p + ")";
+      steps.forEach(function (st) {
+        st.classList.toggle("active", st.getBoundingClientRect().top < vh * 0.66);
+      });
+    };
+    window.addEventListener("scroll", function () {
+      if (!ticking) { ticking = true; requestAnimationFrame(update); }
+    }, { passive: true });
+    window.addEventListener("resize", update);
+    update();
   }
 
-  /* ---------- reveals genéricos (inView) + stagger real nas grades ---------- */
-  var STAGGER_PARENTS = ["pain-list", "metrics-grid", "trust-strip", "diff-grid", "fit-grid", "faq-list"];
-  inView(".reveal", function (el) {
-    var delay = 0, p = el.parentElement;
-    if (p) {
-      for (var k = 0; k < STAGGER_PARENTS.length; k++) {
-        if (p.classList.contains(STAGGER_PARENTS[k])) {
-          delay = Array.prototype.indexOf.call(p.children, el) * 0.08;
-          break;
-        }
-      }
-    }
-    if (el.classList.contains("kicker")) {
-      animate(el, { opacity: [0, 1], x: [-16, 0], clipPath: ["inset(0 100% 0 0)", "inset(0 0% 0 0)"] }, { duration: 0.8, ease: EASE, delay: delay });
-    } else if (el.classList.contains("title") || (el.tagName === "H2" && el.closest(".interlude"))) {
-      animate(el, { opacity: [0, 1], y: [44, 0], clipPath: ["inset(0 0 100% 0)", "inset(0 0 0% 0)"] }, { duration: 0.95, ease: EASE, delay: delay });
-    } else {
-      animate(el, { opacity: [0, 1], y: [46, 0] }, { duration: 0.85, ease: EASE, delay: delay });
-    }
-  }, { margin: "0px 0px -12% 0px" });
-
-  /* ---------- cards 3D entram rotacionando ---------- */
-  function revealCards(sel, rot) {
-    var grid = {};
-    document.querySelectorAll(sel).forEach(function (card, i) {
-      inView(card, function () {
-        animate(card,
-          { opacity: [0, 1], y: [60, 0], rotateX: [14, 0] },
-          { duration: 0.8, ease: EASE, delay: (i % 3) * 0.09 });
-      }, { margin: "0px 0px -14% 0px" });
-    });
-  }
-  revealCards(".feature-card");
-  revealCards(".testi");
-
-  /* ---------- tilt 3D + glow nos cards (hover gesture) ---------- */
-  if (fine) {
-    hoverFn(".feature-card", function (el) {
-      var onMove = function (e) {
-        var r = el.getBoundingClientRect();
-        var px = (e.clientX - r.left) / r.width;
-        var py = (e.clientY - r.top) / r.height;
-        el.style.setProperty("--mx", (px * 100) + "%");
-        el.style.setProperty("--my", (py * 100) + "%");
-        animate(el, { rotateY: (px - 0.5) * 10, rotateX: (0.5 - py) * 8, y: -6 }, { duration: 0.3, ease: "easeOut" });
-      };
-      el.addEventListener("pointermove", onMove);
-      return function () {
-        el.removeEventListener("pointermove", onMove);
-        animate(el, { rotateY: 0, rotateX: 0, y: 0 }, SPRING);
-      };
-    });
-
-    /* lift sutil nos cards de diferenciais, fit e trust */
-    hoverFn(".diff-card, .fit-card, .trust", function (el) {
-      animate(el, { y: -6 }, { duration: 0.3, ease: "easeOut" });
-      var ic = el.querySelector(".icon");
-      if (ic) animate(ic, { scale: 1.08, rotate: -4 }, { duration: 0.3, ease: EASE });
-      return function () {
-        animate(el, { y: 0 }, SPRING);
-        if (ic) animate(ic, { scale: 1, rotate: 0 }, SPRING);
-      };
-    });
-
-    /* dores: desliza e o X gira, reforçando o incômodo */
-    hoverFn(".pain-item", function (el) {
-      var ic = el.querySelector("svg");
-      animate(el, { x: 8 }, { duration: 0.25, ease: "easeOut" });
-      if (ic) animate(ic, { rotate: 90, scale: 1.18 }, { duration: 0.35, ease: EASE });
-      return function () {
-        animate(el, { x: 0 }, SPRING);
-        if (ic) animate(ic, { rotate: 0, scale: 1 }, SPRING);
-      };
-    });
-
-    /* métricas: número cresce a partir da borda esquerda */
-    hoverFn(".metric", function (el) {
-      var num = el.querySelector(".num");
-      if (num) {
-        num.style.transformOrigin = "left center";
-        animate(num, { scale: 1.05 }, { duration: 0.3, ease: "easeOut" });
-      }
-      return function () {
-        if (num) animate(num, { scale: 1 }, SPRING);
-      };
-    });
-
-    /* etapas do método: badge acende no hover */
-    hoverFn(".step", function (el) {
-      var badge = el.querySelector(".badge");
-      if (badge) animate(badge, { scale: 1.12 }, { duration: 0.25, ease: "easeOut" });
-      return function () {
-        if (badge) animate(badge, { scale: 1 }, SPRING);
-      };
-    });
-  }
-
-  /* ---------- WhatsApp flutuante: some enquanto os CTAs do hero
-     estão na tela (mobile), evita sobrepor botão/texto ---------- */
+  /* botão flutuante do WhatsApp: some enquanto os CTAs do topo estão na tela */
   var waFloat = document.querySelector(".wa-float");
   var heroCtas = document.querySelector(".hero-ctas");
-  if (waFloat && heroCtas && "IntersectionObserver" in window) {
-    var waIO = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        waFloat.classList.toggle("wa-hide", entry.isIntersecting);
-      });
-    }, { threshold: 0.1 });
-    waIO.observe(heroCtas);
+  if (waFloat && heroCtas && hasIO) {
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { waFloat.classList.toggle("wa-hide", en.isIntersecting); });
+    }, { threshold: 0.1 }).observe(heroCtas);
   }
-
-  /* ---------- press feedback (scale 0.97, HIG) ---------- */
-  press(".btn-primary, .btn-ghost, .nav-cta, .wa-float", function (el) {
-    animate(el, { scale: 0.97 }, { duration: 0.12, ease: "easeOut" });
-    return function () { animate(el, { scale: 1 }, SPRING); };
-  });
-
-  /* ---------- rota até o topo: linha desenha no scroll ---------- */
-  var route = document.querySelector(".route");
-  scrollFn(animate("#routeFill", { scaleY: [0, 1] }, { ease: "linear" }),
-    { target: route, offset: ["start 0.72", "end 0.5"] });
-  document.querySelectorAll(".step").forEach(function (step) {
-    inView(step, function () {
-      step.classList.add("active");
-      return function () { step.classList.remove("active"); };
-    }, { margin: "0px 0px -34% 0px" });
-  });
-
-  /* ---------- seguro anti-conteúdo-invisível: se algum reveal na viewport
-     seguir oculto (IO falhou/atrasou), revela à força ---------- */
-  setInterval(function () {
-    document.querySelectorAll(".reveal, .feature-card, .testi").forEach(function (el) {
-      if (parseFloat(getComputedStyle(el).opacity) > 0.05) return;
-      var r = el.getBoundingClientRect();
-      if (r.top < innerHeight && r.bottom > 0) {
-        animate(el, { opacity: 1, y: 0, x: 0, rotateX: 0, clipPath: "inset(0 0% 0% 0)" }, { duration: 0.7, ease: EASE });
-      }
-    });
-    document.querySelectorAll(".count").forEach(function (el) {
-      var r = el.getBoundingClientRect();
-      if (el.textContent === "0" && r.top < innerHeight && r.bottom > 0) runCounter(el);
-    });
-  }, 3000);
-
-  /* ---------- luz ambiente + respiração do CTA ---------- */
-  /* ---------- parallax das imagens de fundo (interlúdio + CTA) ---------- */
-  document.querySelectorAll(".interlude-bg, .cta-bg").forEach(function (bg) {
-    scrollFn(animate(bg, { y: [-50, 50] }, { ease: "linear" }),
-      { target: bg.closest("section"), offset: ["start end", "end start"] });
-  });
-
-  document.querySelectorAll("[data-drift]").forEach(function (el, i) {
-    animate(el,
-      { x: [0, i % 2 ? -46 : 46, 0], y: [0, 30, 0] },
-      { duration: 14 + i * 3, repeat: Infinity, ease: "easeInOut" });
-  });
-  animate(".cta-glow",
-    { scale: [1, 1.12, 1], opacity: [0.7, 1, 0.7] },
-    { duration: 6, repeat: Infinity, ease: "easeInOut" });
-});
+})();
 </script>
 </body>
+
 </html>

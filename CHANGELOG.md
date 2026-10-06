@@ -42,3 +42,11 @@ Nada foi publicado em produção. Alterações apenas nesta branch (commit local
 - Fontes (Barlow Condensed e Sora, subset latin) hospedadas em `assets/fonts/` + `assets/fonts.css`: sem requisição ao Google Fonts (mais rápido e melhor para LGPD). CSP sem domínios do Google Fonts.
 - Animação de abertura da home ~2x mais rápida (cortina 1,5s→0,4s; sequência do hero comprimida), mesma coreografia.
 - Resultado local (mobile): páginas de serviço 99-100; home 82-90 (oscila).
+
+## Confiança e visual sóbrio (pedido do Miguel, 06/10/2026)
+- Seção "Cases/Quem já sobe com a gente" removida da home e do menu (Experience Films e Binnos Films fora).
+- Logo corrigida: o site usava recorte borrado de 88px e um triângulo genérico na abertura. Agora usa a logo original (escalador + ATLAS PERFORMANCE GROUP) em alta resolução: header, rodapé, hero, favicon, ícone e imagem de compartilhamento (`assets/og.jpg` 1200×630).
+- Removidas as 3 imagens com aparência de geradas por IA (hero, escalador, horizonte), cortina de abertura, barras de cinema, grão, vinheta, brilhos flutuantes, inclinação 3D nos cards, texto vazado em títulos e a lib `motion.js`. Hero estático com a logo.
+- Textos de IA removidos ("Construído com IA", "Tecnologia própria + IA aplicada", "IA aplicada" em Sites Institucionais, incluindo meta e schema) e a frase de escassez "vagas limitadas".
+- Faixa de plataformas sem HubSpot e RD Station (não confirmados) e sem rolagem automática.
+- Script da home reescrito (~80 linhas): menu, FAQ, entrada suave das seções, linha do método, botão flutuante.
